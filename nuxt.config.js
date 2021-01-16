@@ -31,7 +31,9 @@ export default {
       },
     ],
   },
-
+  env: {
+    MAPBOXAPI: process.env.MAPBOXAPI,
+  },
   css: ["~/assets/scss/main.scss"],
 
   plugins: [
