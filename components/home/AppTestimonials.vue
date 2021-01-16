@@ -4,18 +4,10 @@
       <client-only>
         <swiper :options="swiperOptions" class="c-testimonials__slider">
           <swiper-slide class="c-testimonials__slide">
-            <h4
-              class="c-testimonials-slide__title"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
+            <h4 class="c-testimonials-slide__title">
               “El mejor lugar para degustar en familia y amigos!”
             </h4>
-            <p
-              class="c-testimonials-slide__content"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
+            <p class="c-testimonials-slide__content">
               Es el mejor lugar al que he venido con mi familia, la comida es
               rica, sirven rápido y te atienden de la mejor manera.
             </p>
