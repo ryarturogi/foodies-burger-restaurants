@@ -1,0 +1,15 @@
+* img {
+  max-width: 100%;
+}
+.container {
+  max-width: 120rem;
+}
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+@import "base/fonts";
+@import "base/mixins";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/form";

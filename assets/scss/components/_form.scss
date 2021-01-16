@@ -1,0 +1,63 @@
+// Notices
+
+.notice {
+  width: 100%;
+  border-radius: 4px;
+  display: inline;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 5rem;
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+
+// Forms
+
+.form-control {
+  min-width: 28rem;
+  height: 5rem;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: Noto Sans;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+
+  &--outlined {
+    border: 1px solid #cbd5e0 !important;
+  }
+  &--focus {
+    border: 2px solid #718096 !important;
+  }
+  &--success {
+    border: 1px solid #19b929 !important;
+  }
+  &--error {
+    border: 1px solid #ff2c2c !important;
+  }
+  &--disabled {
+    background: #f7fafc !important;
+    border: 1px solid #cbd5e0 !important;
+  }
+}
+
+// Captions
+
+.caption {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+
+  &--outlined {
+    color: #cbd5e0 !important;
+  }
+  &--focus {
+    color: #cbd5e0 !important;
+  }
+  &--error {
+    color: #ff2c2c !important;
+  }
+  &--success {
+    color: #19b929 !important;
+  }
+}
