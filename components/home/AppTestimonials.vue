@@ -1,6 +1,8 @@
 <template>
-  <section class="l-testimonials">
-    <div class="c-testimonials">
+  <section class="l-testimonials container-fluid">
+    <div
+      class="c-testimonials d-flex justify-content-center align-items-center"
+    >
       <client-only>
         <swiper :options="swiperOptions" class="c-testimonials__slider">
           <swiper-slide class="c-testimonials__slide">
@@ -61,7 +63,6 @@ export default {
 @import "@/assets/scss/base/breakpoints.scss";
 
 .l-testimonials {
-  width: 100%;
   max-height: 63.8rem;
   margin: 10rem auto;
   position: relative;
