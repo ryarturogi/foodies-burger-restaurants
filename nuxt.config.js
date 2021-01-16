@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 export default {
   head: {
     title: "Foodies",
@@ -46,8 +44,6 @@ export default {
   buildModules: ["nuxt-gsap"],
 
   modules: [
-    // doc: https://github.com/nuxt-community/dotenv-module
-    "@nuxtjs/dotenv",
     // doc: https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
     "vue-currency-input/nuxt",
