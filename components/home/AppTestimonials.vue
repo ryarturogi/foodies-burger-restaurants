@@ -30,11 +30,7 @@
             </p>
           </swiper-slide>
         </swiper>
-        <div
-          class="c-testimonials-slide__buttons"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
+        <div class="c-testimonials-slide__buttons">
           <div slot="button-prev" class="c-testimonials-slider__button-prev">
             <img src="@/assets/img/SVG/chevron-left.svg" alt="chevron-left" />
           </div>

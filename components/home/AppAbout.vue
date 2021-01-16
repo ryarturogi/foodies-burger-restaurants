@@ -1,6 +1,6 @@
 <template>
   <div class="l-about-cta">
-    <div class="c-about-cta__image" data-aos="fade-up" data-aos-delay="300">
+    <div class="c-about-cta__image">
       <h2 class="c-about-cta__title" data-aos="flip-up" data-aos-delay="300">
         La comida es <br />
         <span class="c-about-cta__title--highlight">Nuestro Arte</span>
@@ -27,7 +27,7 @@
       <a
         class="c-about-cta-content__action"
         href="/"
-        data-aos="flip-up"
+        data-aos="fade-up"
         data-aos-delay="300"
       >
         Contáctanos

@@ -1,6 +1,6 @@
 <template>
   <div class="l-cta-form">
-    <div class="c-cta-form" data-aos="fade-up" data-aos-delay="100">
+    <div class="c-cta-form">
       <h3 class="c-cta-form__title">Cuentanos tu experiencia</h3>
 
       <p class="c-cta-form__subtitle">

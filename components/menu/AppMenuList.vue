@@ -5,8 +5,6 @@
         v-for="item in paginatedMenu"
         :key="item.id"
         class="c-menu-list__item card border-0"
-        data-aos="fade-up"
-        data-aos-delay="100"
       >
         <img :src="item.image" :alt="item.name" :title="item.name" />
         <h3 class="c-menu-list-item__title">

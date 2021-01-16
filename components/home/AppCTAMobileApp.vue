@@ -3,7 +3,7 @@
     <div class="c-cta-mobile-app__grid">
       <div
         class="c-cta-mobile-app__mobile-mockup"
-        data-aos="flip-up"
+        data-aos="fade-up"
         data-aos-delay="300"
       >
         <img src="@/assets/img/PNG/mobile-mockup.png" alt="Mobile mockup" />
@@ -21,21 +21,21 @@
           <div class="c-cta-mobile-app__card c-cta-mobile-app-cards__first">
             <div
               class="c-cta-mobile-app-cards__count"
-              data-aos="flip-up"
+              data-aos="fade-up"
               data-aos-delay="300"
             >
               01
             </div>
             <h5
               class="c-cta-mobile-app-cards__title"
-              data-aos="flip-up"
+              data-aos="fade-up"
               data-aos-delay="300"
             >
               Solicita rápido
             </h5>
             <p
               class="c-cta-mobile-app-cards__info"
-              data-aos="flip-up"
+              data-aos="fade-up"
               data-aos-delay="300"
             >
               Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar

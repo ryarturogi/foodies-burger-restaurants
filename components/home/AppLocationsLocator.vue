@@ -1,17 +1,17 @@
 <template>
   <div class="l-locator row no-gutters">
     <div class="c-locator col-md-6">
-      <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="300">
+      <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="100">
         Estamos para ti
       </h3>
-      <div class="c-type-selector" data-aos="fade-up" data-aos-delay="300">
+      <div class="c-type-selector">
         <button
           class="c-type-selector__option"
           :class="{
             'c-type-selector__option--active': type === 'takeaway',
           }"
           data-aos="fade-up"
-          data-aos-delay="300"
+          data-aos-delay="200"
           @click="setType('takeaway')"
         >
           <div class="c-type-selector__icon">
@@ -32,7 +32,7 @@
           Delivery
         </button>
       </div>
-      <div class="l-search-bar" data-aos="fade-up" data-aos-delay="300">
+      <div class="l-search-bar">
         <div class="c-search-bar">
           <img
             src="@/assets/img/SVG/search-icon.svg"
@@ -53,8 +53,6 @@
             v-for="location in locations"
             :key="location.id"
             class="c-results__item"
-            data-aos="fade-up"
-            data-aos-delay="300"
           >
             <button
               class="c-results-item__action"
@@ -81,12 +79,7 @@
         </li>
       </nav> -->
     </div>
-    <div
-      id="map"
-      class="l-map-locator col-md-6"
-      data-aos="fade-up"
-      data-aos-delay="300"
-    ></div>
+    <div id="map" class="l-map-locator col-md-6"></div>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="l-menu-filters container" data-aos="flip-up" data-aos-delay="300">
+  <div class="l-menu-filters container">
     <div
       class="c-menu-filters__search form-control rounded-1 d-flex align-items-center"
     >
