@@ -21,7 +21,11 @@
             {{ item.category }}
           </div>
           <div class="c-menu-list-item__price">
-            {{ item.price }}
+            <img
+              src="@/assets/img/SVG/dollar-sign.svg"
+              alt="dollar sign"
+              class="c-menu-list-item__price--currency"
+            />{{ item.price }}
           </div>
         </div>
       </li>
@@ -150,16 +154,16 @@ export default {
   margin: 0 0 2rem;
   padding: 0 2rem;
   font-family: Syne;
-  font-size: 2.2rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  line-height: 2.6rem;
+  line-height: 3rem;
 }
 .c-menu-list-item__description {
   margin: 0 0 3.85rem;
   padding: 0 2rem;
   font-family: Open Sans;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 }
 .c-menu-list-item__footer {
   padding: 0 2rem;
@@ -169,20 +173,31 @@ export default {
 }
 .c-menu-list-item__category {
   font-family: Open Sans;
-  font-size: 1.8rem;
-  line-height: 2.5rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  color: #78909c;
 }
 .c-menu-list-item__price {
   width: fit-content;
   height: 2.8rem;
   padding: 0.6rem 1rem;
   border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
   background: $color-yellow-og;
   font-family: Druk Text Wide;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.6rem;
   color: $color-black;
+
+  &--currency {
+    width: 1.6rem;
+
+    margin: 0 !important;
+    padding: 0;
+    border-radius: 0;
+  }
 }
 .c-menu__pagination {
   margin: 0 auto 6.5rem;
