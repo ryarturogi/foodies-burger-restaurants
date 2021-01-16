@@ -24,13 +24,25 @@
             </p>
           </swiper-slide>
         </swiper>
+
         <div class="c-testimonials-slide__buttons">
-          <div slot="button-prev" class="c-testimonials-slider__button-prev">
+          <div
+            slot="button-prev"
+            class="c-testimonials-slider__button-prev"
+            width="32"
+          >
             <img src="@/assets/img/SVG/chevron-left.svg" alt="chevron-left" />
           </div>
-          <div class="c-testimonials__counter">1 / 5</div>
+          <div
+            slot="pagination"
+            class="c-testimonials__counter swiper-pagination"
+          ></div>
           <div slot="button-next" class="c-testimonials-slider__button-next">
-            <img src="@/assets/img/SVG/chevron-right.svg" alt="chevron-right" />
+            <img
+              src="@/assets/img/SVG/chevron-right.svg"
+              alt="chevron-right"
+              width="32"
+            />
           </div>
         </div>
       </client-only>
@@ -48,6 +60,10 @@ export default {
         slidesPerView: 1,
         fadeEffect: {
           crossFade: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
         },
         navigation: {
           nextEl: ".c-testimonials-slider__button-next",
@@ -136,6 +152,12 @@ export default {
   }
 }
 
+.c-testimonials__slider {
+  width: 76.8rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .c-testimonials__slide {
   padding: 0 2rem;
   display: flex;
@@ -150,7 +172,7 @@ export default {
   font-family: Druk Text Wide;
   font-size: 2.6rem;
   font-weight: 700;
-  line-height: 2.6rem;
+  line-height: 3rem;
   text-align: center;
 
   @include m {
@@ -182,15 +204,41 @@ export default {
 }
 
 .c-testimonials-slide__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6rem;
+  width: 100px;
+  height: 50px;
+  display: grid;
+  position: relative;
+  grid-auto-flow: column;
+  font-size: 2rem;
   font-weight: 700;
+}
+.c-testimonials__counter {
+  width: 40px;
+  height: 50px;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  position: relative !important;
+  font-family: Syne;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.1rem;
+
+  .swiper-pagination-current,
+  .swiper-pagination-total {
+    font-family: Anonymous Pro;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.1rem;
+  }
 }
 .c-testimonials-slider__button-prev,
 .c-testimonials-slider__button-next {
-  outline: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+
   &:hover,
   &:active {
     filter: invert(87%) sepia(20%) saturate(2651%) hue-rotate(355deg)
