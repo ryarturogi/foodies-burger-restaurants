@@ -43,12 +43,13 @@ export default {
 
   components: true,
 
-  buildModules: ["nuxt-gsap"],
+  buildModules: [],
 
   modules: [
+    // doc: https://github.com/dansmaculotte/nuxt-security
+    "@dansmaculotte/nuxt-security",
     // doc: https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
-    "vue-currency-input/nuxt",
   ],
 
   axios: {},

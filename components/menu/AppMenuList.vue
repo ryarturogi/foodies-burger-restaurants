@@ -108,28 +108,6 @@ export default {
     prevPage() {
       this.currentPage--;
     },
-    beforeEnter(el) {
-      el.style.opacity = 0;
-    },
-    enter(el, done) {
-      this.$nextTick(() => {
-        this.$gsap.to(el, {
-          opacity: 1,
-          delay: el.dataset.index * 0.25,
-          onComplete: done,
-        });
-      });
-    },
-
-    leave(el, done) {
-      this.$nextTick(() => {
-        this.$gsap.to(el, {
-          opacity: 0,
-          delay: el.dataset.index * 0.25,
-          onComplete: done,
-        });
-      });
-    },
   },
 };
 </script>
