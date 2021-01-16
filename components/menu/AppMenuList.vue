@@ -157,6 +157,10 @@ export default {
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 3rem;
+
+  @include m {
+    padding: 0;
+  }
 }
 .c-menu-list-item__description {
   margin: 0 0 3.85rem;
@@ -164,17 +168,25 @@ export default {
   font-family: Open Sans;
   font-size: 1.8rem;
   line-height: 2.6rem;
+
+  @include m {
+    padding: 0;
+  }
 }
 .c-menu-list-item__footer {
   padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include m {
+    padding: 0;
+  }
 }
 .c-menu-list-item__category {
   font-family: Open Sans;
-  font-size: 2rem;
-  line-height: 2.8rem;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   color: #78909c;
 }
 .c-menu-list-item__price {
@@ -183,16 +195,17 @@ export default {
   padding: 0.6rem 1rem;
   border-radius: 0.8rem;
   display: flex;
+  justify-content: center;
   align-items: center;
   background: $color-yellow-og;
   font-family: Druk Text Wide;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.6rem;
   color: $color-black;
 
   &--currency {
-    width: 1.6rem;
+    width: 1.4rem;
 
     margin: 0 !important;
     padding: 0;
