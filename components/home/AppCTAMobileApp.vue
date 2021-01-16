@@ -113,6 +113,10 @@ export default {};
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include m {
+    margin: 0 0 -15rem;
+  }
 }
 .c-cta-mobile-app__title {
   width: 100%;
@@ -133,7 +137,7 @@ export default {};
     line-height: 3.8rem;
   }
 
-  &::after {
+  &::before {
     content: "";
     width: 41.1rem;
     max-width: 100%;
@@ -146,10 +150,13 @@ export default {};
     z-index: -1;
 
     @include xs {
-      bottom: initial;
-      top: 3.2rem;
+      bottom: -1.8rem;
       height: 5.4rem;
       width: 55.8rem;
+    }
+
+    @include s {
+      bottom: -1.6rem;
     }
   }
 }

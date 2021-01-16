@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link to="/" class="logo" title="Foodies" data-aos="fade-up">
+  <nuxt-link to="/" class="logo" title="Foodies">
     <img
       :src="
         require(`@/assets/img/SVG/${darkMode ? `logo--white.svg` : `logo.svg`}`)

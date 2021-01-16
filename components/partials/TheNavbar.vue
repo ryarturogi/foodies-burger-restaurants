@@ -1,20 +1,12 @@
 <template>
   <div class="l-menu" :class="{ 'l-menu--dark': darkMode }">
     <nav class="c-menu">
-      <a class="c-menu__item" href="#" data-aos="fade-up" data-aos-delay="50"
-        >Acerca de</a
-      >
-      <a class="c-menu__item" href="#" data-aos="fade-up" data-aos-delay="100"
-        >Restaurantes</a
-      >
-      <nuxt-link class="c-menu__item" to="/menu"
-        ><span data-aos="fade-up" data-aos-delay="150">Menú </span></nuxt-link
-      >
-      <a class="c-menu__item" href="#" data-aos="fade-up" data-aos-delay="200"
-        >Contáctanos</a
-      >
+      <a class="c-menu__item" href="#">Acerca de</a>
+      <a class="c-menu__item" href="#">Restaurantes</a>
+      <nuxt-link class="c-menu__item" to="/menu">Menú </nuxt-link>
+      <a class="c-menu__item" href="#">Contáctanos</a>
     </nav>
-    <div class="l-menu__mobile" data-aos="fade-up">
+    <div class="l-menu__mobile">
       <button class="c-menu-mobile__action" @click="toggleMobileMenu">
         <img
           :src="
