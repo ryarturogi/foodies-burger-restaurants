@@ -51,7 +51,7 @@ export default {
         },
         {
           name: "canonical",
-          content: "https://foodies.com" + this.$route.path,
+          content: "https://foodies-elaniin.herokuapp.com" + this.$route.path,
         },
         {
           property: "og:title",
@@ -63,7 +63,7 @@ export default {
         },
         {
           property: "og:url",
-          content: "https://foodies.com" + this.$route.path,
+          content: "https://foodies-elaniin.herokuapp.com" + this.$route.path,
         },
         {
           property: "twitter:description",
