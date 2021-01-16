@@ -1,7 +1,7 @@
 <template>
   <div class="l-locator row no-gutters">
     <div class="c-locator col-md-6">
-      <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="100">
+      <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="300">
         Estamos para ti
       </h3>
       <div class="c-type-selector">
@@ -10,8 +10,6 @@
           :class="{
             'c-type-selector__option--active': type === 'takeaway',
           }"
-          data-aos="fade-up"
-          data-aos-delay="200"
           @click="setType('takeaway')"
         >
           <div class="c-type-selector__icon">
