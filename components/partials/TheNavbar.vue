@@ -89,11 +89,6 @@ export default {
 
 .l-menu {
   display: flex;
-  justify-content: space-between;
-
-  @include l {
-    width: 100%;
-  }
 }
 
 .c-menu {

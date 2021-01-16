@@ -122,8 +122,8 @@ export default {};
   }
 
   @include l {
-    width: 50.8rem;
-    margin: 6.5rem 1.6rem 0 0;
+    width: 56.3rem;
+    margin: 6.5rem -5.9rem 0 0;
     order: 2;
   }
 

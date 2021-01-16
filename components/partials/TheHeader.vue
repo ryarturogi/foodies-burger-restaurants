@@ -46,12 +46,17 @@ export default {
 }
 .c-header {
   width: 100%;
-  height: 10rem;
+  height: 10.4rem;
   max-width: $screen-xl-min;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  @include m {
+    justify-content: flex-start;
+    height: 12.4rem;
+  }
 }
 </style>
