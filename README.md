@@ -1,9 +1,99 @@
-# foodies-elaniin
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+<a href="https://github.com/ryarturogi/foodies-elaniin">
+  <img src="https://foodies-elaniin.herokuapp.com/_nuxt/img/logo.2b58803.svg" alt="Logo" width="200">
+</a>
 
-## Build Setup
+<p align="center">
+  <a href="https://github.com/ryarturogi/foodies-elaniin"><strong>Explore the docs »</strong></a>
+  <br />
+  <a href="https://github.com/ryarturogi/foodies-elaniin/issues">Report Bug</a>
+  ·
+  <a href="https://github.com/ryarturogi/foodies-elaniin/issues">Request Feature</a>
+</p>
+</p>
 
-```bash
-# install dependencies
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+<summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+<ol>
+  <li>
+    <a href="#about-the-project">About The Project</a>
+    <ul>
+      <li><a href="#built-with">Built With</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="#getting-started">Getting Started</a>
+    <ul>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#installation">Installation</a></li>
+    </ul>
+  </li>
+  <li><a href="#acknowledgements">Acknowledgements</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ol>
+</details>
+
+<br />
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+A famous hamburger restaurant app for searching near store locations and a dynamic hamburgers menu where you can find the perfect hamburger for you belly.
+
+<br />
+
+### Built With
+
+- [VueJs](https://vuejs.org/)
+- [NuxtJs](https://nuxtjs.org/)
+- [Nodejs](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
+- [Bootstrap 4](https://getbootstrap.com/docs/4.5/)
+- [MapBox API](https://docs.mapbox.com/)
+- [AOS Animations](https://michalsnik.github.io/aos/)
+
+<!-- GETTING STARTED -->
+<br />
+
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+<br />
+<br />
+
+## Prerequisites
+
+<br />
+
+- Install Yarn - doc: https://www.yarnpkg.com/
+
+- Check if Yarn is installed
+
+```sh
+$ yarn --v
+```
+
+<br />
+
+## Installation
+
+<br />
+
+1. Clone the repo
+
+```sh
+$ git clone https://github.com/ryarturogi/foodies-elaniin.git
+```
+
+2. Install dependencies
+
+```sh
+
+# install dependencies with yarn
 $ yarn install
 
 # serve with hot reload at localhost:3000
@@ -17,4 +107,33 @@ $ yarn start
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+<br />
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+### Environment Variables
+
+MAPBOXAPI
+
+- Doc: https://docs.mapbox.com/
+
+#### Things you may want to cover:
+
+- [VueJs version 2](https://vuejs.org/v2/guide/)
+- [NuxtJs version 2.14+](https://nuxtjs.org/docs/2.x/get-started)
+
+[contributors-shield]: https://img.shields.io/github/contributors/ryarturogi/foodies-elaniin.svg?style=for-the-badge
+[contributors-url]: https://github.com/ryarturogi/foodies-elaniin/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/ryarturogi/foodies-elaniin.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/ryarturogi/foodies-elaniin.svg?style=for-the-badge
+[issues-url]: https://github.com/ryarturogi/foodies-elaniin/issues
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/ryarturogi
+
+<br />
+
+## Contact
+
+© 2021 Ricardo A. Guillen.
+[r.arturogi@gmail.com](mailto:r.arturogi@gmail.com)
