@@ -291,11 +291,40 @@ export default {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3rem;
+  position: relative;
   color: $color-white;
   transition: ease all 0.3s;
 
   &:hover {
-    color: $color-yellow-500;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 0.6rem;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      background-color: $color-yellow-og;
+      transform: rotate(-0.64deg);
+    }
+  }
+
+  &--selected {
+    z-index: 1;
+    &::before {
+      content: "";
+      width: -webkit-fill-available;
+      height: 0.6rem;
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+      background-color: $color-yellow-og;
+    }
+
+    &:hover {
+      &::before {
+        background-color: $color-orange-500;
+      }
+    }
   }
 
   &:last-of-type {
