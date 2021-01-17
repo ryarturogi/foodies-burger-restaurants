@@ -139,10 +139,15 @@
             </div>
             <div class="form-group">
               <button
-                class="c-cta-form__submit"
+                class="c-cta-form__submit btn-warning"
+                :class="{
+                  'btn-secondary color-white':
+                    !formData.name && !formData.email,
+                  'btn-success': formSent,
+                  'btn-danger': error,
+                }"
+                :disabled="!formData.name && !formData.email"
                 type="submit"
-                data-aos="fade-up"
-                data-aos-delay="300"
                 @click="sendForm"
               >
                 Enviar Comentarios
@@ -167,6 +172,7 @@ export default {
       },
       success: false,
       formSent: false,
+      error: false,
       errors: {
         name: false,
         email: false,
@@ -177,7 +183,7 @@ export default {
   },
   methods: {
     async sendForm() {
-      let error = false;
+      this.error = false;
       if (this.formSent) return;
       this.formSent = true;
 
@@ -201,13 +207,13 @@ export default {
       for (const prop in this.errors) {
         if (Object.prototype.hasOwnProperty.call(this.errors, prop)) {
           if (this.errors[prop]) {
-            error = true;
+            this.error = true;
             this.formSent = false;
           }
         }
       }
 
-      if (error) return;
+      if (this.error) return;
 
       const form = {
         ...this.formData,
@@ -336,19 +342,10 @@ export default {
   border: 0;
   border-radius: 4px;
   float: right;
-  background: $color-yellow-og;
   font-family: Open Sans;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.2rem;
   outline: none;
-
-  &:hover {
-    background: #ffea79;
-  }
-
-  &:focus {
-    background: $color-green-600;
-  }
 }
 </style>
