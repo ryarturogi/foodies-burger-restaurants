@@ -69,12 +69,20 @@ export default {
           content: this.seo.url + this.$route.path,
         },
         {
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
           property: "twitter:description",
           content: this.seo.description,
         },
         {
           property: "twitter:title",
           content: this.seo.title,
+        },
+        {
+          name: "twitter:image",
+          content: this.seo.image,
         },
         {
           property: "og:image",
