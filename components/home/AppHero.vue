@@ -46,7 +46,7 @@ export default {};
   justify-content: space-between;
 
   @include l {
-    height: 80vh;
+    height: 82vh;
     flex-direction: row;
     padding: 0;
   }
