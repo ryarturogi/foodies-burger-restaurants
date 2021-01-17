@@ -114,6 +114,10 @@ $ yarn generate
 
 ### Environment Variables
 
+ELANIIN_LOCATIONS_API
+ELANIIN_CONTACT_API
+ELANIIN_CATEGORIES_API
+ELANIIN_MENU_API
 MAPBOXAPI
 
 - Doc: https://docs.mapbox.com/
