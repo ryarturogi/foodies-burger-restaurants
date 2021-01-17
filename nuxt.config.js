@@ -56,6 +56,8 @@ export default {
     "@nuxtjs/axios",
     // doc; https://nuxtjs.org/faq/http-proxy/
     "@nuxtjs/proxy",
+    // doc: https://www.npmjs.com/package/vue-scrollto
+    "vue-scrollto/nuxt",
   ],
 
   axios: {},
