@@ -5,22 +5,24 @@
     >
       <client-only>
         <swiper :options="swiperOptions" class="c-testimonials__slider">
-          <swiper-slide class="c-testimonials__slide">
-            <h4 class="c-testimonials-slide__title">
-              “El mejor lugar para degustar en familia y amigos!”
+          <swiper-slide
+            v-for="item in testimonials"
+            :key="item.title"
+            class="c-testimonials__slide"
+          >
+            <h4
+              class="c-testimonials-slide__title"
+              data-aos="flip-up"
+              data-aos-delay="300"
+            >
+              {{ item.title }}
             </h4>
-            <p class="c-testimonials-slide__content">
-              Es el mejor lugar al que he venido con mi familia, la comida es
-              rica, sirven rápido y te atienden de la mejor manera.
-            </p>
-          </swiper-slide>
-          <swiper-slide>
-            <h4 class="c-testimonials-slide__title">
-              “El mejor lugar para degustar en familia y amigos!”
-            </h4>
-            <p class="c-testimonials-slide__content">
-              Es el mejor lugar al que he venido con mi familia, la comida es
-              rica, sirven rápido y te atienden de la mejor manera.
+            <p
+              class="c-testimonials-slide__content"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              {{ item.description }}
             </p>
           </swiper-slide>
         </swiper>
@@ -55,6 +57,18 @@
 export default {
   data() {
     return {
+      testimonials: [
+        {
+          title: "“El mejor lugar para degustar en familia y amigos!”",
+          description:
+            "Es el mejor lugar al que he venido con mi familia, la comida es rica, sirven rápido y te atienden de la mejor manera.",
+        },
+        {
+          title: "“El mejor burger de mi vida!”",
+          description:
+            "Foodies siempre lo recomiendo entre mi familia y amigos por ser para mi el mejor lugar para comer hamburguesas",
+        },
+      ],
       swiperOptions: {
         loop: false,
         slidesPerView: 1,
