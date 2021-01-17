@@ -103,8 +103,6 @@
 </template>
 
 <script>
-import VueScrollTo from "vue-scrollto";
-
 export default {
   props: {
     menuList: {
@@ -146,24 +144,9 @@ export default {
     },
     nextPage() {
       this.currentPage++;
-      VueScrollTo.scrollTo(".l-menu-list", 300, {
-        offset: -60,
-      });
     },
     prevPage() {
       this.currentPage--;
-      VueScrollTo.scrollTo(".l-menu-list", 300, {
-        offset: -60,
-      });
-    },
-    beforeLeave(el) {
-      const { marginLeft, marginTop, width, height } = window.getComputedStyle(
-        el
-      );
-      el.style.left = `${el.offsetLeft - parseFloat(marginLeft, 10)}px`;
-      el.style.top = `${el.offsetTop - parseFloat(marginTop, 10)}px`;
-      el.style.width = width;
-      el.style.height = height;
     },
   },
 };
