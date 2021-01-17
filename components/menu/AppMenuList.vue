@@ -299,7 +299,7 @@ export default {
   align-items: center;
 
   @include m {
-    height: 67.9rem;
+    height: 40rem;
   }
 }
 .c-menu-list-empty__image {
@@ -318,6 +318,8 @@ export default {
   margin: 0 auto 0.8rem;
 }
 .c-menu-list-empty__description {
+  width: 100%;
+  max-width: 52.3rem;
   font-family: Open Sans;
   font-size: 1.8rem;
   font-weight: 400;
