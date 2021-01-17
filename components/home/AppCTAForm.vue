@@ -269,14 +269,17 @@ export default {
 
 .l-cta-form {
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
+  padding: 3rem 0 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   background: $color-black;
 
   @include m {
+    padding: 0;
     min-height: 150vh;
     min-height: 61rem;
   }
