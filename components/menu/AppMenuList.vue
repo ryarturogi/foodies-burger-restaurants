@@ -1,6 +1,12 @@
 <template>
   <div class="l-menu-list container">
-    <ul class="c-menu-list">
+    <transition-group
+      tag="ul"
+      name="list"
+      mode="out-in"
+      class="c-menu-list"
+      @before-leave="beforeLeave"
+    >
       <li
         v-for="item in paginatedMenu"
         :key="item.id"
@@ -29,44 +35,56 @@
           </div>
         </div>
       </li>
-    </ul>
-    <div
-      v-if="totalPages > 1"
-      class="c-menu__pagination d-flex justify-content-center align-items-center mx-auto mt-4 mb-5 px-2"
-    >
-      <button
-        v-if="currentPage !== 1"
-        class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
-        @click="prevPage"
+    </transition-group>
+    <transition-group name="fade" tag="div">
+      <div
+        v-if="totalPages > 1"
+        key="1"
+        class="c-menu__pagination d-flex justify-content-center align-items-center mx-auto mt-4 mb-5 px-2"
       >
-        Anterior
-      </button>
-      <button
-        v-for="pageNumber in totalPages"
-        :key="pageNumber.id"
-        class="c-menu-pagination__button c-menu-pagination__button--white btn btn-outline rounded"
-        :class="{
-          current: currentPage === pageNumber,
-          last:
-            pageNumber == totalPages && Math.abs(pageNumber - currentPage) > 3,
-          first: pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3,
-        }"
-        @click="setPage(pageNumber)"
-      >
-        {{ pageNumber }}
-      </button>
-      <button
-        v-if="currentPage < totalPages"
-        class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
-        @click="nextPage"
-      >
-        Siguiente
-      </button>
-    </div>
+        <button
+          key="2"
+          :class="{ 'c-menu-pagination__button--disabled': currentPage === 1 }"
+          class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
+          :disabled="currentPage === 1"
+          @click="prevPage"
+        >
+          Anterior
+        </button>
+        <button
+          v-for="pageNumber in totalPages"
+          :key="pageNumber.id"
+          class="c-menu-pagination__button c-menu-pagination__button--white btn btn-outline rounded"
+          :class="{
+            current: currentPage === pageNumber,
+            last:
+              pageNumber == totalPages &&
+              Math.abs(pageNumber - currentPage) > 3,
+            first: pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3,
+          }"
+          @click="setPage(pageNumber)"
+        >
+          {{ pageNumber }}
+        </button>
+        <button
+          key="3"
+          :disabled="currentPage === totalPages"
+          :class="{
+            'c-menu-pagination__button--disabled': currentPage === totalPages,
+          }"
+          class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
+          @click="nextPage"
+        >
+          Siguiente
+        </button>
+      </div>
+    </transition-group>
   </div>
 </template>
 
 <script>
+import VueScrollTo from "vue-scrollto";
+
 export default {
   props: {
     menuList: {
@@ -77,7 +95,7 @@ export default {
   data() {
     return {
       currentPage: 1,
-      itemsPerPage: 4,
+      itemsPerPage: 8,
       resultCount: 0,
     };
   },
@@ -108,9 +126,24 @@ export default {
     },
     nextPage() {
       this.currentPage++;
+      VueScrollTo.scrollTo(".l-menu-list", 300, {
+        offset: -60,
+      });
     },
     prevPage() {
       this.currentPage--;
+      VueScrollTo.scrollTo(".l-menu-list", 300, {
+        offset: -60,
+      });
+    },
+    beforeLeave(el) {
+      const { marginLeft, marginTop, width, height } = window.getComputedStyle(
+        el
+      );
+      el.style.left = `${el.offsetLeft - parseFloat(marginLeft, 10)}px`;
+      el.style.top = `${el.offsetTop - parseFloat(marginTop, 10)}px`;
+      el.style.width = width;
+      el.style.height = height;
     },
   },
 };
@@ -226,6 +259,11 @@ export default {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.7rem;
+
+  &--disabled {
+    background: $color-gray-300;
+    color: $color-gray-500;
+  }
 
   &--white {
     background: $color-white;
