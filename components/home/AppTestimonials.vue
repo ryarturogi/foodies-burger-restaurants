@@ -94,7 +94,7 @@ export default {
 
 .l-testimonials {
   max-height: 63.8rem;
-  margin: 10rem auto;
+  margin: 10rem auto 5rem;
   position: relative;
   display: block;
   clear: both;
@@ -102,6 +102,10 @@ export default {
   @include m {
     max-height: initial;
     min-height: 63.8rem;
+  }
+
+  @include l {
+    margin: 10rem auto 7rem;
   }
 
   &::before {

@@ -1,6 +1,6 @@
 <template>
-  <div class="l-locator container-fluid row no-gutters">
-    <div class="c-locator col-md-12 col-lg-6">
+  <div class="l-locator row no-gutters p-0">
+    <div class="c-locator col-md-12 col-lg-6 px-5">
       <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="300">
         Estamos para ti
       </h3>
@@ -92,7 +92,7 @@
         </div>
       </transition-group>
     </div>
-    <div id="map" class="l-map-locator col-md-12 col-lg-6"></div>
+    <div id="map" class="l-map-locator col-md-12 col-lg-6 p-0"></div>
   </div>
 </template>
 
@@ -178,12 +178,10 @@ export default {
 }
 
 .c-locator {
-  padding: 1rem;
 }
 
 .c-location__heading {
   margin: 0 0 3.2rem;
-  padding: 0 2rem;
   font-family: Druk Text Wide;
   font-size: 2.8rem;
   font-weight: 700;
@@ -281,7 +279,6 @@ export default {
 .c-search-bar {
   width: 100%;
   height: 5rem;
-  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
