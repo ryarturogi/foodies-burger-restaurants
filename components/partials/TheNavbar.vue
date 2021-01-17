@@ -127,6 +127,10 @@ export default {
   }
 }
 
+.l_menu__mobile {
+  position: relative;
+  z-index: 5;
+}
 .c-menu__mobile {
   width: 100%;
   max-width: 100vh;

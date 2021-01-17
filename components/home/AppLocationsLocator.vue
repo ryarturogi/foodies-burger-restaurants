@@ -1,6 +1,6 @@
 <template>
-  <div class="l-locator container-fluid row no-gutters">
-    <div class="c-locator col-sm-12 col-md-6">
+  <div class="l-locator row no-gutters p-0">
+    <div class="c-locator col-md-12 col-lg-6 px-5">
       <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="300">
         Estamos para ti
       </h3>
@@ -42,11 +42,18 @@
             class="c-search-bar__field"
             type="text"
             placeholder="Buscar nombre o dirección"
-            @change="showResults = true"
             @keyup.enter="getLocations"
           />
         </div>
-        <transition-group name="fade" tag="nav" class="c-results">
+      </div>
+      <transition-group name="list" mode="out-in">
+        <transition-group
+          v-if="locations && locations.length > 0"
+          key="1"
+          name="fade"
+          tag="nav"
+          class="c-results"
+        >
           <li
             v-for="location in locations"
             :key="location.id"
@@ -54,6 +61,10 @@
           >
             <button
               class="c-results-item__action"
+              :class="{
+                'c-results-item__action--selected':
+                  selectedLocation === location.id,
+              }"
               @click="setLocation(location)"
             >
               <h4 class="c-results-item__heading">{{ location.name }}</h4>
@@ -65,19 +76,23 @@
             </button>
           </li>
         </transition-group>
-      </div>
-
-      <!-- <nav v-if="locations.length && !showResults" class="c-locations__list">
-        <li
-          v-for="location in locations"
-          :key="location.id"
-          class="c-locations-list__item"
+        <div
+          v-else-if="!locations.length"
+          key="2"
+          class="c-results c-results__empty"
         >
-          {{ location.name }} - {{ location.address }}
-        </li>
-      </nav> -->
+          <img
+            class="c-results-empty__image"
+            src="@/assets/img/SVG/location-not-found.svg"
+            title="¡No hemos encontrado lo que buscas!"
+          />
+          <h2 class="c-results-empty__title">
+            ¡No hemos encontrado lo que buscas!
+          </h2>
+        </div>
+      </transition-group>
     </div>
-    <div id="map" class="l-map-locator col-sm-12 col-md-6"></div>
+    <div id="map" class="l-map-locator col-md-12 col-lg-6 p-0"></div>
   </div>
 </template>
 
@@ -92,7 +107,7 @@ export default {
       search: "",
       type: "takeaway",
       locations: [],
-      showResults: false,
+      selectedLocation: null,
       map: {},
     };
   },
@@ -116,20 +131,14 @@ export default {
       });
       this.locations = locations.data;
       this.search = "";
-      this.showResults = true;
     },
     setLocation(loc) {
-      this.locations = this.locations.filter(
-        (loc) =>
-          loc.name.indexOf(this.search.toLowerCase()) &&
-          loc.type.indexOf(this.type)
-      );
-      this.locations = location.data;
+      this.selectedLocation = loc.id;
       this.search = "";
-      this.showResults = false;
 
       const LngLat = [Number(loc.longitude), Number(loc.latitude)];
       new mapboxgl.Marker().setLngLat(LngLat).addTo(this.map);
+
       this.map.flyTo({
         center: LngLat,
         zoom: 12,
@@ -137,7 +146,6 @@ export default {
     },
     setType(type) {
       this.type = type;
-      this.showResults = false;
       this.search = "";
     },
     createMap() {
@@ -164,18 +172,16 @@ export default {
   display: flex;
   justify-content: center;
 
-  @include m {
+  @include l {
     min-height: fit-content;
   }
 }
 
 .c-locator {
-  padding: 1rem;
 }
 
 .c-location__heading {
   margin: 0 0 3.2rem;
-  padding: 0 2rem;
   font-family: Druk Text Wide;
   font-size: 2.8rem;
   font-weight: 700;
@@ -183,10 +189,13 @@ export default {
   width: min-content;
 
   @include s {
-    padding: 0 5.3rem;
+    width: auto;
+  }
+
+  @include m {
+    padding: 0 1.8rem;
     font-size: 3.5rem;
     line-height: 3.5rem;
-    width: auto;
   }
   @include l {
     font-size: 4rem;
@@ -216,14 +225,15 @@ export default {
   color: $color-black;
   background: $color-white;
   outline: 0;
+  transition: ease all 0.3s;
 
-  @include s {
+  @include m {
     font-size: 1.6rem;
   }
-  @include m {
+  @include l {
     font-size: 2rem;
   }
-  @include l {
+  @include xl {
     font-size: 2.4rem;
   }
 
@@ -243,13 +253,13 @@ export default {
   width: 3rem;
   height: 3rem;
 
-  @include m {
+  @include l {
     width: 3.5rem;
     height: 3.5rem;
     margin: 0 1.25rem 0 0;
   }
 
-  @include l {
+  @include xl {
     width: 4rem;
     height: 4rem;
     margin: 0 2.5rem 0 0;
@@ -260,7 +270,7 @@ export default {
     height: 3rem;
     max-width: 100%;
 
-    @include s {
+    @include m {
       width: 4rem;
       height: 4rem;
     }
@@ -269,8 +279,7 @@ export default {
 
 .c-search-bar {
   width: 100%;
-  height: 5rem;
-  padding: 0 2rem;
+  height: 5.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,7 +300,7 @@ export default {
   font-size: 1.8rem;
   font-weight: 700;
 
-  @include m {
+  @include l {
     font-size: 1.8rem;
     font-weight: 700;
   }
@@ -304,7 +313,7 @@ export default {
     text-transform: uppercase;
     color: $color-gray-500;
 
-    @include m {
+    @include l {
       font-size: 1.8rem;
       font-weight: 700;
       line-height: 2.5rem;
@@ -317,7 +326,7 @@ export default {
   height: 2.4rem;
   margin: 0 1rem 0 0;
 
-  @include m {
+  @include l {
     margin: 0 2.4rem 0 0;
   }
 }
@@ -353,9 +362,14 @@ export default {
   text-align: left;
   color: $color-black;
   background: $color-white;
+  transition: ease all 0.3s;
 
   &:hover {
     background: $color-yellow-300;
+  }
+
+  &--selected {
+    background: $color-yellow-400;
   }
 }
 
@@ -378,5 +392,32 @@ export default {
   width: 100%;
   height: 50rem;
   min-height: max-content;
+}
+
+.c-results__empty {
+  width: 100%;
+  height: 34.1rem;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-results-empty__image {
+  width: 21.597rem;
+  max-width: 100%;
+  height: 15.996rem;
+  max-height: 100%;
+  margin: 0 auto 2.1rem;
+}
+
+.c-results-empty__title {
+  margin: 0 auto 1.7rem;
+  font-family: Syne;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-align: center;
 }
 </style>

@@ -2,8 +2,8 @@
   <div class="l-about-cta">
     <div class="c-about-cta__image">
       <h2 class="c-about-cta__title" data-aos="flip-up" data-aos-delay="300">
-        La comida es <br />
-        <span class="c-about-cta__title--highlight">Nuestro Arte</span>
+        <div>La comida es</div>
+        <div class="c-about-cta__title--highlight">Nuestro Arte</div>
       </h2>
     </div>
     <div class="l-about-cta__content">
@@ -49,7 +49,7 @@ export default {};
   display: grid;
   grid-template-columns: 1fr;
 
-  @include m {
+  @include l {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -63,7 +63,7 @@ export default {};
   background: url("~assets/img/JPG/about-foodies.jpg") no-repeat center;
   background-size: cover;
 
-  @include m {
+  @include l {
     padding: 0 4rem 4rem;
   }
 }
@@ -76,8 +76,9 @@ export default {};
   text-align: right;
   color: $color-white;
   text-transform: uppercase;
+  white-space: nowrap;
 
-  @include s {
+  @include m {
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -101,7 +102,7 @@ export default {};
   background-size: contain;
   overflow: visible;
 
-  @include m {
+  @include l {
     margin: 0;
   }
 }

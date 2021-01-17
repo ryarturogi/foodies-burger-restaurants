@@ -1,10 +1,5 @@
 <template>
   <div class="App">
-    <img
-      class="c-menu-bg"
-      src="@/assets/img/SVG/menu-bg.svg"
-      alt="Menu Background"
-    />
     <TheHeader :dark-mode="true" />
     <Nuxt />
     <TheFooter />

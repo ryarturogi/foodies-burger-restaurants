@@ -1,5 +1,5 @@
 <template>
-  <div class="l-cta-form">
+  <div v-if="!formSent" class="l-cta-form">
     <div class="c-cta-form">
       <h3 class="c-cta-form__title">Cuentanos tu experiencia</h3>
 
@@ -158,6 +158,21 @@
       </form>
     </div>
   </div>
+  <div v-else class="l-cta-form l-cta-form__empty">
+    <img
+      class="c-cta-form-empty__image"
+      src="@/assets/img/SVG/contact-message-sent.svg"
+      title="Gracias por tus comentarios"
+    />
+    <h2 class="c-cta-form-empty__title">Gracias por tus comentarios</h2>
+    <p class="c-cta-form-empty__description">
+      Don't miss out on our great offers & Receive deals from all our top
+      restaurants via e-mail.
+    </p>
+    <button class="c-cta-form-empty__button btn btn-large btn-warning">
+      Conoce nuestro menu
+    </button>
+  </div>
 </template>
 
 <script>
@@ -254,14 +269,18 @@ export default {
 
 .l-cta-form {
   width: 100%;
-  min-height: 150vh;
+  min-height: 120vh;
+  padding: 3rem 0 15rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   background: $color-black;
 
   @include m {
+    padding: 0;
+    min-height: 150vh;
     min-height: 61rem;
   }
 }
@@ -347,5 +366,63 @@ export default {
   font-weight: 700;
   line-height: 2.2rem;
   outline: none;
+}
+
+.l-cta-form__empty {
+  width: 100%;
+  height: 67.9rem;
+  max-height: 100%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-cta-form-empty__image {
+  width: 16.8rem;
+  max-width: 100%;
+  height: 18.7rem;
+  max-height: 100%;
+  margin: 0 auto 2.2rem;
+}
+
+.c-cta-form-empty__title {
+  margin: 0 auto 1.7rem;
+  font-family: Druk Text Wide;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-align: center;
+  color: $color-white;
+
+  @include m {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+  }
+}
+
+.c-cta-form-empty__description {
+  margin: 0 auto 3.4rem;
+  font-family: Open Sans;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: $color-white;
+
+  @include m {
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+  }
+}
+
+.c-cta-form-empty__button {
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  text-align: center;
 }
 </style>

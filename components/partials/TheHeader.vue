@@ -1,5 +1,5 @@
 <template>
-  <header class="l-header" :class="{ 'l-header--dark': darkMode }">
+  <header class="l-header">
     <div class="c-header">
       <TheLogo :dark-mode="darkMode" />
       <TheNavbar :dark-mode="darkMode" />
@@ -39,10 +39,10 @@ export default {
   padding: 0 2rem;
   display: flex;
   flex-direction: column;
-
-  &--dark {
-    background: $color-black;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .c-header {
   width: 100%;

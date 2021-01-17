@@ -1,85 +1,105 @@
 <template>
-  <div class="l-menu-list container">
-    <transition-group
-      tag="ul"
-      name="list"
-      mode="out-in"
-      class="c-menu-list"
-      @before-leave="beforeLeave"
+  <transition-group name="fade" mode="out-in">
+    <div
+      v-if="paginatedMenu && paginatedMenu.length > 0"
+      key="1"
+      class="l-menu-list container"
     >
-      <li
-        v-for="item in paginatedMenu"
-        :key="item.id"
-        class="c-menu-list__item card border-0"
+      <transition-group
+        tag="ul"
+        name="list"
+        mode="out-in"
+        class="c-menu-list"
+        @before-leave="beforeLeave"
       >
-        <img :src="item.image" :alt="item.name" :title="item.name" />
-        <h3 class="c-menu-list-item__title">
-          {{ item.name }}
-        </h3>
+        <li
+          v-for="item in paginatedMenu"
+          :key="item.id"
+          class="c-menu-list__item card border-0"
+        >
+          <img :src="item.image" :alt="item.name" :title="item.name" />
+          <h3 class="c-menu-list-item__title">
+            {{ item.name }}
+          </h3>
 
-        <p class="c-menu-list-item__description card-body border-0">
-          {{ item.description }}
-        </p>
+          <p class="c-menu-list-item__description card-body border-0">
+            {{ item.description }}
+          </p>
+          <div
+            class="c-menu-list-item__footer card-footer border-0 bg-transparent"
+          >
+            <div class="c-menu-list-item__category">
+              {{ item.category }}
+            </div>
+            <div class="c-menu-list-item__price">
+              <img
+                src="@/assets/img/SVG/dollar-sign.svg"
+                alt="dollar sign"
+                class="c-menu-list-item__price--currency"
+              />{{ item.price }}
+            </div>
+          </div>
+        </li>
+      </transition-group>
+      <transition-group name="fade" tag="div">
         <div
-          class="c-menu-list-item__footer card-footer border-0 bg-transparent"
+          v-if="totalPages > 1"
+          key="1"
+          class="c-menu__pagination d-flex justify-content-center align-items-center mx-auto mt-4 mb-5 px-2"
         >
-          <div class="c-menu-list-item__category">
-            {{ item.category }}
-          </div>
-          <div class="c-menu-list-item__price">
-            <img
-              src="@/assets/img/SVG/dollar-sign.svg"
-              alt="dollar sign"
-              class="c-menu-list-item__price--currency"
-            />{{ item.price }}
-          </div>
+          <button
+            key="2"
+            :class="{
+              'c-menu-pagination__button--disabled': currentPage === 1,
+            }"
+            class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
+            :disabled="currentPage === 1"
+            @click="prevPage"
+          >
+            Anterior
+          </button>
+          <button
+            v-for="pageNumber in totalPages"
+            :key="pageNumber.id"
+            class="c-menu-pagination__button c-menu-pagination__button--white btn btn-outline rounded"
+            :class="{
+              current: currentPage === pageNumber,
+              last:
+                pageNumber == totalPages &&
+                Math.abs(pageNumber - currentPage) > 3,
+              first: pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3,
+            }"
+            @click="setPage(pageNumber)"
+          >
+            {{ pageNumber }}
+          </button>
+          <button
+            key="3"
+            :disabled="currentPage === totalPages"
+            :class="{
+              'c-menu-pagination__button--disabled': currentPage === totalPages,
+            }"
+            class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
+            @click="nextPage"
+          >
+            Siguiente
+          </button>
         </div>
-      </li>
-    </transition-group>
-    <transition-group name="fade" tag="div">
-      <div
-        v-if="totalPages > 1"
-        key="1"
-        class="c-menu__pagination d-flex justify-content-center align-items-center mx-auto mt-4 mb-5 px-2"
-      >
-        <button
-          key="2"
-          :class="{ 'c-menu-pagination__button--disabled': currentPage === 1 }"
-          class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
-          :disabled="currentPage === 1"
-          @click="prevPage"
-        >
-          Anterior
-        </button>
-        <button
-          v-for="pageNumber in totalPages"
-          :key="pageNumber.id"
-          class="c-menu-pagination__button c-menu-pagination__button--white btn btn-outline rounded"
-          :class="{
-            current: currentPage === pageNumber,
-            last:
-              pageNumber == totalPages &&
-              Math.abs(pageNumber - currentPage) > 3,
-            first: pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3,
-          }"
-          @click="setPage(pageNumber)"
-        >
-          {{ pageNumber }}
-        </button>
-        <button
-          key="3"
-          :disabled="currentPage === totalPages"
-          :class="{
-            'c-menu-pagination__button--disabled': currentPage === totalPages,
-          }"
-          class="c-menu-pagination__button btn btn-outlined btn-lg rounded"
-          @click="nextPage"
-        >
-          Siguiente
-        </button>
-      </div>
-    </transition-group>
-  </div>
+      </transition-group>
+    </div>
+    <div v-else key="2" class="l-menu-list l-menu-list__empty container">
+      <img
+        class="c-menu-list-empty__image"
+        src="@/assets/img/SVG/burgers-not-found.svg"
+        title="¡Platillo no encontrado!"
+      />
+      <h2 class="c-menu-list-empty__title">¡Platillo no encontrado!</h2>
+      <p class="c-menu-list-empty__description">
+        Te invitamos a que verifiques si el nombre esta bien escrito o prueba
+        buscando un nuevo platillo.
+      </p>
+    </div>
+  </transition-group>
 </template>
 
 <script>
@@ -283,5 +303,42 @@ export default {
   font-size: 2rem;
   line-height: 2.7rem;
   color: $color-yellow-og;
+}
+
+.l-menu-list__empty {
+  width: 100%;
+  height: fit-content;
+  max-height: 100%;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include m {
+    height: 67.9rem;
+  }
+}
+.c-menu-list-empty__image {
+  width: 16.8rem;
+  max-width: 100%;
+  height: 18.7rem;
+  max-height: 100%;
+  margin: 0 auto 2.2rem;
+}
+.c-menu-list-empty__title {
+  font-family: Syne;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-align: center;
+  margin: 0 auto 0.8rem;
+}
+.c-menu-list-empty__description {
+  font-family: Open Sans;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-align: center;
 }
 </style>
