@@ -34,7 +34,7 @@ export default {
       menu: [],
       categories: [],
       seo: {
-        title: "Nuestro Menu",
+        title: "Nuestro Menu - Foodies",
         siteName: "Foodies",
         description:
           "Encuentra la mejor hamburguesa del país a la facilidad de unos clicks.",
