@@ -2,8 +2,8 @@
   <div class="l-about-cta">
     <div class="c-about-cta__image">
       <h2 class="c-about-cta__title" data-aos="flip-up" data-aos-delay="300">
-        La comida es <br />
-        <span class="c-about-cta__title--highlight">Nuestro Arte</span>
+        <div>La comida es</div>
+        <div class="c-about-cta__title--highlight">Nuestro Arte</div>
       </h2>
     </div>
     <div class="l-about-cta__content">
@@ -76,6 +76,7 @@ export default {};
   text-align: right;
   color: $color-white;
   text-transform: uppercase;
+  white-space: nowrap;
 
   @include m {
     font-size: 4rem;
