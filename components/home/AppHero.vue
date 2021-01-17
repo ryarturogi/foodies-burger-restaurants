@@ -38,7 +38,7 @@ export default {};
 .l-hero {
   width: 100%;
   max-width: $screen-xl-min;
-  height: 80vh;
+  height: fit-content;
   margin: 0 auto 5rem;
   padding: 0 1.6rem;
   display: flex;
@@ -46,6 +46,7 @@ export default {};
   justify-content: space-between;
 
   @include l {
+    height: 80vh;
     flex-direction: row;
     padding: 0;
   }

@@ -54,7 +54,7 @@ export default {
   align-items: center;
   position: relative;
 
-  @include m {
+  @include l {
     justify-content: flex-start;
     height: 12.4rem;
   }
