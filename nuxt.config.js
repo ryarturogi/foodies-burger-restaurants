@@ -54,9 +54,20 @@ export default {
     "@dansmaculotte/nuxt-security",
     // doc: https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    // doc; https://nuxtjs.org/faq/http-proxy/
+    "@nuxtjs/proxy",
   ],
 
   axios: {},
+
+  proxy: {
+    "/api": {
+      target: "https://api.elaniin.dev",
+      pathRewrite: {
+        "^/api": "/",
+      },
+    },
+  },
 
   build: {
     extend(config, { isDev, isClient }) {
