@@ -368,6 +368,7 @@ export default {
   width: 100%;
   height: 67.9rem;
   max-height: 100%;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -385,22 +386,35 @@ export default {
 .c-cta-form-empty__title {
   margin: 0 auto 1.7rem;
   font-family: Druk Text Wide;
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-weight: 700;
-  line-height: 3.6rem;
+  line-height: 3rem;
   text-align: center;
+  color: $color-white;
+
+  @include m {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+  }
 }
 
 .c-cta-form-empty__description {
   margin: 0 auto 3.4rem;
   font-family: Open Sans;
-  font-size: 2.4rem;
-  line-height: 3.3rem;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
   text-align: center;
+  color: $color-white;
+
+  @include m {
+    font-size: 2.4rem;
+    line-height: 3.3rem;
+  }
 }
 
 .c-cta-form-empty__button {
   margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
   font-family: Open Sans;
   font-size: 1.6rem;
   font-weight: 700;
