@@ -63,21 +63,30 @@ $box-shadow-inner: inset 0px 2px 4px rgba(0, 0, 0, 0.06);
   opacity: 0;
 }
 
-.cell {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  align-items: center;
-  width: fit-content;
-  height: fit-content;
-  margin-right: -1px;
-  margin-bottom: -1px;
+.list-enter {
+  opacity: 0;
 }
-.cell:nth-child(3n) {
-  margin-right: 0;
+
+.list-enter-active {
+  transition: all 1s;
 }
-.cell:nth-child(27n) {
-  margin-bottom: 0;
+
+.list-leave {
 }
-.cell-move {
-  transition: transform 1s;
+
+// NEED TO ADD POSITION: ABSOLUTE TO THE ELEMENT FOR REMOVAL
+.list-leave-active {
+  transition: all 0.3s;
+  opacity: 0;
+  transform: translateY(0);
+  position: absolute;
+}
+
+.list-move {
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  @for $i from 1 through 15 {
+    &:nth-child(#{$i}) {
+      transition: transform 0.4s #{$i * 0.1}s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+  }
 }

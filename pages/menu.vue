@@ -16,8 +16,8 @@ import AppMenuHero from "@/components/menu/AppMenuHero";
 import AppMenuFilters from "@/components/menu/AppMenuFilters";
 import AppMenuList from "@/components/menu/AppMenuList";
 
-const menuApi = "https://api.elaniin.dev/api/menu";
-const categoriesApi = "https://api.elaniin.dev/api/categories";
+const menuApi = process.env.ELANIIN_MENU_API;
+const categoriesApi = process.env.ELANIIN_CATEGORIES_API;
 
 export default {
   components: {

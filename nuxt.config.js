@@ -32,6 +32,10 @@ export default {
     ],
   },
   env: {
+    ELANIIN_LOCATIONS_API: process.env.ELANIIN_LOCATIONS_API,
+    ELANIIN_CONTACT_API: process.env.ELANIIN_CONTACT_API,
+    ELANIIN_CATEGORIES_API: process.env.ELANIIN_CATEGORIES_API,
+    ELANIIN_MENU_API: process.env.ELANIIN_MENU_API,
     MAPBOXAPI: process.env.MAPBOXAPI,
   },
   css: ["~/assets/scss/main.scss"],
@@ -50,9 +54,22 @@ export default {
     "@dansmaculotte/nuxt-security",
     // doc: https://go.nuxtjs.dev/axios
     "@nuxtjs/axios",
+    // doc; https://nuxtjs.org/faq/http-proxy/
+    "@nuxtjs/proxy",
+    // doc: https://www.npmjs.com/package/vue-scrollto
+    "vue-scrollto/nuxt",
   ],
 
   axios: {},
+
+  proxy: {
+    "/api": {
+      target: "https://api.elaniin.dev",
+      pathRewrite: {
+        "^/api": "/",
+      },
+    },
+  },
 
   build: {
     extend(config, { isDev, isClient }) {
