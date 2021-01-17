@@ -336,5 +336,6 @@ export default {
 #map {
   width: 100%;
   height: 50rem;
+  min-height: max-content;
 }
 </style>
