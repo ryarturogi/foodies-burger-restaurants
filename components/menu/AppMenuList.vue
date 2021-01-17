@@ -307,12 +307,17 @@ export default {
 
 .l-menu-list__empty {
   width: 100%;
-  height: 67.9rem;
+  height: fit-content;
   max-height: 100%;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include m {
+    height: 67.9rem;
+  }
 }
 .c-menu-list-empty__image {
   width: 16.8rem;

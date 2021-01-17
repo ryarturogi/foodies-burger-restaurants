@@ -49,7 +49,7 @@ export default {};
   display: grid;
   grid-template-columns: 1fr;
 
-  @include m {
+  @include l {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -63,7 +63,7 @@ export default {};
   background: url("~assets/img/JPG/about-foodies.jpg") no-repeat center;
   background-size: cover;
 
-  @include m {
+  @include l {
     padding: 0 4rem 4rem;
   }
 }
@@ -77,7 +77,7 @@ export default {};
   color: $color-white;
   text-transform: uppercase;
 
-  @include s {
+  @include m {
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -101,7 +101,7 @@ export default {};
   background-size: contain;
   overflow: visible;
 
-  @include m {
+  @include l {
     margin: 0;
   }
 }

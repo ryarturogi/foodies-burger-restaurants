@@ -1,6 +1,6 @@
 <template>
   <div class="l-locator container-fluid row no-gutters">
-    <div class="c-locator col-sm-12 col-md-6">
+    <div class="c-locator col-md-12 col-lg-6">
       <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="300">
         Estamos para ti
       </h3>
@@ -95,7 +95,7 @@
         </li>
       </nav> -->
     </div>
-    <div id="map" class="l-map-locator col-sm-12 col-md-6"></div>
+    <div id="map" class="l-map-locator col-md-12 col-lg-6"></div>
   </div>
 </template>
 
@@ -182,7 +182,7 @@ export default {
   display: flex;
   justify-content: center;
 
-  @include m {
+  @include l {
     min-height: fit-content;
   }
 }
@@ -200,7 +200,7 @@ export default {
   line-height: 2.8rem;
   width: min-content;
 
-  @include s {
+  @include m {
     padding: 0 5.3rem;
     font-size: 3.5rem;
     line-height: 3.5rem;
@@ -235,13 +235,13 @@ export default {
   background: $color-white;
   outline: 0;
 
-  @include s {
+  @include m {
     font-size: 1.6rem;
   }
-  @include m {
+  @include l {
     font-size: 2rem;
   }
-  @include l {
+  @include xl {
     font-size: 2.4rem;
   }
 
@@ -261,13 +261,13 @@ export default {
   width: 3rem;
   height: 3rem;
 
-  @include m {
+  @include l {
     width: 3.5rem;
     height: 3.5rem;
     margin: 0 1.25rem 0 0;
   }
 
-  @include l {
+  @include xl {
     width: 4rem;
     height: 4rem;
     margin: 0 2.5rem 0 0;
@@ -278,7 +278,7 @@ export default {
     height: 3rem;
     max-width: 100%;
 
-    @include s {
+    @include m {
       width: 4rem;
       height: 4rem;
     }
@@ -309,7 +309,7 @@ export default {
   font-size: 1.8rem;
   font-weight: 700;
 
-  @include m {
+  @include l {
     font-size: 1.8rem;
     font-weight: 700;
   }
@@ -322,7 +322,7 @@ export default {
     text-transform: uppercase;
     color: $color-gray-500;
 
-    @include m {
+    @include l {
       font-size: 1.8rem;
       font-weight: 700;
       line-height: 2.5rem;
@@ -335,7 +335,7 @@ export default {
   height: 2.4rem;
   margin: 0 1rem 0 0;
 
-  @include m {
+  @include l {
     margin: 0 2.4rem 0 0;
   }
 }

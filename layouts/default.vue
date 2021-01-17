@@ -23,7 +23,6 @@ export default {
 
 .App {
   min-height: 100vh;
-  background: url("~assets/img/SVG/hero-bg.svg") no-repeat top right;
   background-size: 39.5rem;
   overflow-x: hidden;
 
