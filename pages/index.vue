@@ -29,9 +29,13 @@ export default {
   data() {
     return {
       seo: {
-        title: "Foodies",
+        title: "Foodies - Hacemos la mejor hamburguesa de El Salvador",
+        siteName: "Foodies",
         description:
           "Encuentra la mejor hamburguesa del país a la facilidad de unos clicks.",
+        image:
+          "https://repository-images.githubusercontent.com/330184586/1010d300-5853-11eb-9f94-90979cebddbc",
+        url: "https://foodies-elaniin.herokuapp.com/",
       },
     };
   },
@@ -40,12 +44,17 @@ export default {
       title: this.seo.title,
       meta: [
         {
+          property: "og:site_name",
+          content: this.seo.siteName,
+        },
+        {
           name: "description",
           content: this.seo.description,
         },
+        { property: "og:type", content: "website" },
         {
           name: "canonical",
-          content: "https://foodies-elaniin.herokuapp.com" + this.$route.path,
+          content: this.seo.url + this.$route.path,
         },
         {
           property: "og:title",
@@ -57,7 +66,7 @@ export default {
         },
         {
           property: "og:url",
-          content: "https://foodies-elaniin.herokuapp.com" + this.$route.path,
+          content: this.seo.url + this.$route.path,
         },
         {
           property: "twitter:description",
@@ -69,15 +78,15 @@ export default {
         },
         {
           property: "og:image",
-          content: "@/assets/img/PNG/logo.png",
+          content: this.seo.image,
         },
         {
           property: "og:image:secure_url",
-          content: "@/assets/img/PNG/logo.png",
+          content: this.seo.image,
         },
         {
           property: "twitter:image",
-          content: "@/assets/img/PNG/logo.png",
+          content: this.seo.image,
         },
         {
           property: "og:image:height",
@@ -88,7 +97,7 @@ export default {
           content: 315,
         },
       ],
-      titleTemplate: "%s - Foodies",
+      titleTemplate: `%s - ${this.seo.siteName}`,
     };
   },
 };
