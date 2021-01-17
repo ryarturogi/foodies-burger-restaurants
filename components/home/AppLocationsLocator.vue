@@ -1,6 +1,6 @@
 <template>
-  <div class="l-locator row no-gutters">
-    <div class="c-locator col-md-6">
+  <div class="l-locator container-fluid row no-gutters">
+    <div class="c-locator col-sm-12 col-md-6">
       <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="300">
         Estamos para ti
       </h3>
@@ -77,7 +77,7 @@
         </li>
       </nav> -->
     </div>
-    <div id="map" class="l-map-locator col-md-6"></div>
+    <div id="map" class="l-map-locator col-sm-12 col-md-6"></div>
   </div>
 </template>
 
@@ -174,19 +174,21 @@ export default {
 }
 
 .c-location__heading {
-  margin: 0 auto 3.2rem;
+  margin: 0 0 3.2rem;
   padding: 0 2rem;
   font-family: Druk Text Wide;
   font-size: 2.8rem;
   font-weight: 700;
   line-height: 2.8rem;
+  width: min-content;
 
   @include s {
     padding: 0 5.3rem;
     font-size: 3.5rem;
     line-height: 3.5rem;
+    width: auto;
   }
-  @include m {
+  @include l {
     font-size: 4rem;
     line-height: 4rem;
   }
@@ -207,16 +209,22 @@ export default {
   align-items: center;
   border: 1px solid $color-gray-500;
   font-family: Syne;
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 800;
   line-height: 1.8rem;
   filter: invert(0);
   color: $color-black;
   background: $color-white;
   outline: 0;
 
+  @include s {
+    font-size: 1.6rem;
+  }
   @include m {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+  @include l {
+    font-size: 2.4rem;
   }
 
   &--active {
@@ -228,23 +236,41 @@ export default {
   }
 }
 .c-type-selector__icon {
-  margin: 0 1.5rem 0 0;
+  margin: 0 1rem 0 0;
   display: flex;
   align-items: center;
+  height: auto;
+  width: 3rem;
+  height: 3rem;
 
   @include m {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 1.25rem 0 0;
+  }
+
+  @include l {
+    width: 4rem;
+    height: 4rem;
     margin: 0 2.5rem 0 0;
   }
 
   img {
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     max-width: 100%;
+
+    @include s {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 }
 
 .c-search-bar {
   width: 100%;
   height: 5rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,20 +291,35 @@ export default {
   font-size: 1.8rem;
   font-weight: 700;
 
-  &::placeholder {
-    font-family: Open Sans;
+  @include m {
     font-size: 1.8rem;
     font-weight: 700;
-    line-height: 2.5rem;
+  }
+
+  &::placeholder {
+    font-family: Open Sans;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.8rem;
     text-transform: uppercase;
     color: $color-gray-500;
+
+    @include m {
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: 2.5rem;
+    }
   }
 }
 
 .c-search-bar-field__icon {
   width: 2.4rem;
   height: 2.4rem;
-  margin: 0 2.4rem 0 0;
+  margin: 0 1rem 0 0;
+
+  @include m {
+    margin: 0 2.4rem 0 0;
+  }
 }
 
 .c-results {
