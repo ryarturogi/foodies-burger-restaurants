@@ -105,7 +105,7 @@ export default {
           content: 315,
         },
       ],
-      titleTemplate: `%s - ${this.seo.siteName}`,
+      titleTemplate: "%s - " + this.seo.siteName,
     };
   },
 };
