@@ -225,6 +225,7 @@ export default {
   color: $color-black;
   background: $color-white;
   outline: 0;
+  transition: ease all 0.3s;
 
   @include m {
     font-size: 1.6rem;
