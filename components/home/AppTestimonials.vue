@@ -238,6 +238,8 @@ export default {
   padding: 0;
   margin: 0;
   display: inline;
+  outline: 0;
+  height: 2rem;
 
   &:hover,
   &:active {
