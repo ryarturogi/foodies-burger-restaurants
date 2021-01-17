@@ -279,7 +279,7 @@ export default {
 
 .c-search-bar {
   width: 100%;
-  height: 5rem;
+  height: 5.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,6 +362,7 @@ export default {
   text-align: left;
   color: $color-black;
   background: $color-white;
+  transition: ease all 0.3s;
 
   &:hover {
     background: $color-yellow-300;
