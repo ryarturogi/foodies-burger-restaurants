@@ -54,17 +54,16 @@ export default {};
     background-size: calc(45.5rem - 2rem);
   }
   @include m {
-    background: url("~assets/img/SVG/hero-bg--tablet.svg") no-repeat top right;
     height: fit-content;
     min-height: 66.9rem;
     align-items: center;
+    background: url("~assets/img/SVG/hero-bg--tablet.svg") no-repeat top right;
     background-size: auto;
   }
   @include l {
-    background: url("~assets/img/SVG/hero-bg.svg") no-repeat top right;
-    background-size: 56rem;
     min-height: 87.4rem;
     padding: 0 2rem;
+    background: url("~assets/img/SVG/hero-bg.svg") no-repeat top right;
   }
   @include xl {
     min-height: 87.4rem;
