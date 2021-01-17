@@ -165,8 +165,8 @@ export default {
 }
 
 .c-menu-filters__search {
-  width: 40.7rem;
-  max-width: 100%;
+  width: 100%;
+  max-width: 40.7rem;
   height: 6rem;
   padding: 0 2rem;
   border: 1px solid #c4c4c4;

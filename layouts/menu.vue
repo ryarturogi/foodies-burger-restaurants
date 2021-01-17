@@ -57,6 +57,7 @@ export default {
   top: 0;
   right: 0;
   z-index: 0;
-  max-width: max-content;
+  min-width: 58.5rem;
+  max-width: fit-content;
 }
 </style>

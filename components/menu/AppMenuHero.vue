@@ -18,12 +18,16 @@
 @import "@/assets/scss/base/breakpoints.scss";
 
 .l-hero-menu {
-  height: fit-content;
-  min-height: 51rem;
+  height: 50.6rem;
+  max-width: 100%;
   background: $color-black;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include m {
+    height: 48.6rem;
+  }
 }
 .c-hero-menu {
   width: $screen-xl-min;
@@ -77,14 +81,14 @@
   }
 }
 .c-hero-menu__burger {
-  width: 32.8rem;
+  width: 33.8rem;
   max-width: 100%;
   margin: 0 auto 5.2rem;
   position: relative;
   order: 1;
 
   @include l {
-    width: 34rem;
+    width: 53rem;
     right: -10rem;
     order: 2;
   }
