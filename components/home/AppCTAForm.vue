@@ -269,7 +269,7 @@ export default {
 
 .l-cta-form {
   width: 100%;
-  min-height: 150vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -277,6 +277,7 @@ export default {
   background: $color-black;
 
   @include m {
+    min-height: 150vh;
     min-height: 61rem;
   }
 }

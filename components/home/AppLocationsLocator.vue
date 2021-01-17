@@ -200,11 +200,14 @@ export default {
   line-height: 2.8rem;
   width: min-content;
 
+  @include s {
+    width: auto;
+  }
+
   @include m {
-    padding: 0 5.3rem;
+    padding: 0 1.8rem;
     font-size: 3.5rem;
     line-height: 3.5rem;
-    width: auto;
   }
   @include l {
     font-size: 4rem;
