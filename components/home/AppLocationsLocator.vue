@@ -84,7 +84,7 @@
 <script>
 import mapboxgl from "mapbox-gl";
 
-const locationsApi = "https://api.elaniin.dev/api/locations";
+const locationsApi = process.env.ELANIIN_LOCATIONS_API;
 
 export default {
   data() {

@@ -32,6 +32,10 @@ export default {
     ],
   },
   env: {
+    ELANIIN_LOCATIONS_API: process.env.ELANIIN_LOCATIONS_API,
+    ELANIIN_CONTACT_API: process.env.ELANIIN_CONTACT_API,
+    ELANIIN_CATEGORIES_API: process.env.ELANIIN_CATEGORIES_API,
+    ELANIIN_MENU_API: process.env.ELANIIN_MENU_API,
     MAPBOXAPI: process.env.MAPBOXAPI,
   },
   css: ["~/assets/scss/main.scss"],

@@ -162,6 +162,9 @@
 
 <script>
 import validator from "validator";
+
+const contactApi = process.env.ELANIIN_CONTACT_API;
+
 export default {
   data() {
     return {
@@ -226,10 +229,7 @@ export default {
         message: "",
       };
 
-      const { success } = await this.$axios.$post(
-        "https://api.elaniin.dev/api/contact",
-        form
-      );
+      const { success } = await this.$axios.$post(contactApi, form);
       if (success) {
         this.success = true;
         this.formSent = false;
