@@ -42,12 +42,11 @@
             class="c-search-bar__field"
             type="text"
             placeholder="Buscar nombre o dirección"
-            @change="showResults = true"
             @keyup.enter="getLocations"
           />
         </div>
       </div>
-      <transition-group name="fade" mode="out-in">
+      <transition-group name="list" mode="out-in">
         <transition-group
           v-if="locations && locations.length > 0"
           key="1"
@@ -62,6 +61,10 @@
           >
             <button
               class="c-results-item__action"
+              :class="{
+                'c-results-item__action--selected':
+                  selectedLocation === location.id,
+              }"
               @click="setLocation(location)"
             >
               <h4 class="c-results-item__heading">{{ location.name }}</h4>
@@ -73,7 +76,11 @@
             </button>
           </li>
         </transition-group>
-        <div v-else key="2" class="c-results c-results__empty">
+        <div
+          v-else-if="!locations.length"
+          key="2"
+          class="c-results c-results__empty"
+        >
           <img
             class="c-results-empty__image"
             src="@/assets/img/SVG/location-not-found.svg"
@@ -84,16 +91,6 @@
           </h2>
         </div>
       </transition-group>
-
-      <!-- <nav v-if="locations.length && !showResults" class="c-locations__list">
-        <li
-          v-for="location in locations"
-          :key="location.id"
-          class="c-locations-list__item"
-        >
-          {{ location.name }} - {{ location.address }}
-        </li>
-      </nav> -->
     </div>
     <div id="map" class="l-map-locator col-md-12 col-lg-6"></div>
   </div>
@@ -110,7 +107,7 @@ export default {
       search: "",
       type: "takeaway",
       locations: [],
-      showResults: false,
+      selectedLocation: null,
       map: {},
     };
   },
@@ -134,20 +131,14 @@ export default {
       });
       this.locations = locations.data;
       this.search = "";
-      this.showResults = true;
     },
     setLocation(loc) {
-      this.locations = this.locations.filter(
-        (loc) =>
-          loc.name.indexOf(this.search.toLowerCase()) &&
-          loc.type.indexOf(this.type)
-      );
-      this.locations = location.data;
+      this.selectedLocation = loc.id;
       this.search = "";
-      this.showResults = false;
 
       const LngLat = [Number(loc.longitude), Number(loc.latitude)];
       new mapboxgl.Marker().setLngLat(LngLat).addTo(this.map);
+
       this.map.flyTo({
         center: LngLat,
         zoom: 12,
@@ -155,7 +146,6 @@ export default {
     },
     setType(type) {
       this.type = type;
-      this.showResults = false;
       this.search = "";
     },
     createMap() {
@@ -377,6 +367,10 @@ export default {
 
   &:hover {
     background: $color-yellow-300;
+  }
+
+  &--selected {
+    background: $color-yellow-400;
   }
 }
 
