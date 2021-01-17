@@ -50,6 +50,9 @@ export default {};
   background: url("~assets/img/SVG/hero-bg--mobile.svg") no-repeat top right;
   background-size: calc(100% - 2rem);
 
+  @include s {
+    background-size: calc(45.5rem - 2rem);
+  }
   @include m {
     background: url("~assets/img/SVG/hero-bg--tablet.svg") no-repeat top right;
     height: fit-content;
@@ -64,7 +67,6 @@ export default {};
     padding: 0 2rem;
   }
   @include xl {
-    background: url("~assets/img/SVG/hero-bg.svg") no-repeat top right;
     min-height: 87.4rem;
     padding: 0 2rem;
   }
@@ -163,6 +165,8 @@ export default {};
   order: 1;
 
   @include m {
+    width: 42.2rem;
+    margin: -11rem auto 0;
     order: 2;
   }
 
