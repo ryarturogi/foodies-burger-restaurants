@@ -1,5 +1,5 @@
 <template>
-  <div class="l-cta-form">
+  <div v-if="!formSent" class="l-cta-form">
     <div class="c-cta-form">
       <h3 class="c-cta-form__title">Cuentanos tu experiencia</h3>
 
@@ -157,6 +157,21 @@
         </div>
       </form>
     </div>
+  </div>
+  <div v-else class="l-cta-form l-cta-form__empty">
+    <img
+      class="c-cta-form-empty__image"
+      src="@/assets/img/SVG/contact-message-sent.svg"
+      title="Gracias por tus comentarios"
+    />
+    <h2 class="c-cta-form-empty__title">Gracias por tus comentarios</h2>
+    <p class="c-cta-form-empty__description">
+      Don't miss out on our great offers & Receive deals from all our top
+      restaurants via e-mail.
+    </p>
+    <button class="c-cta-form-empty__button btn btn-large btn-warning">
+      Conoce nuestro menu
+    </button>
   </div>
 </template>
 
@@ -347,5 +362,49 @@ export default {
   font-weight: 700;
   line-height: 2.2rem;
   outline: none;
+}
+
+.l-cta-form__empty {
+  width: 100%;
+  height: 67.9rem;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-cta-form-empty__image {
+  width: 16.8rem;
+  max-width: 100%;
+  height: 18.7rem;
+  max-height: 100%;
+  margin: 0 auto 2.2rem;
+}
+
+.c-cta-form-empty__title {
+  margin: 0 auto 1.7rem;
+  font-family: Druk Text Wide;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 3.6rem;
+  text-align: center;
+}
+
+.c-cta-form-empty__description {
+  margin: 0 auto 3.4rem;
+  font-family: Open Sans;
+  font-size: 2.4rem;
+  line-height: 3.3rem;
+  text-align: center;
+}
+
+.c-cta-form-empty__button {
+  margin: 0 auto 2rem;
+  font-family: Open Sans;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.2rem;
+  text-align: center;
 }
 </style>

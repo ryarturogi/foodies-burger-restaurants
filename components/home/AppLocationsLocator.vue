@@ -46,7 +46,15 @@
             @keyup.enter="getLocations"
           />
         </div>
-        <transition-group name="fade" tag="nav" class="c-results">
+      </div>
+      <transition-group name="fade" mode="out-in">
+        <transition-group
+          v-if="locations && locations.length > 0"
+          key="1"
+          name="fade"
+          tag="nav"
+          class="c-results"
+        >
           <li
             v-for="location in locations"
             :key="location.id"
@@ -65,7 +73,17 @@
             </button>
           </li>
         </transition-group>
-      </div>
+        <div v-else key="2" class="c-results c-results__empty">
+          <img
+            class="c-results-empty__image"
+            src="@/assets/img/SVG/location-not-found.svg"
+            title="¡No hemos encontrado lo que buscas!"
+          />
+          <h2 class="c-results-empty__title">
+            ¡No hemos encontrado lo que buscas!
+          </h2>
+        </div>
+      </transition-group>
 
       <!-- <nav v-if="locations.length && !showResults" class="c-locations__list">
         <li
@@ -378,5 +396,32 @@ export default {
   width: 100%;
   height: 50rem;
   min-height: max-content;
+}
+
+.c-results__empty {
+  width: 100%;
+  height: 34.1rem;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-results-empty__image {
+  width: 21.597rem;
+  max-width: 100%;
+  height: 15.996rem;
+  max-height: 100%;
+  margin: 0 auto 2.1rem;
+}
+
+.c-results-empty__title {
+  margin: 0 auto 1.7rem;
+  font-family: Syne;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-align: center;
 }
 </style>
