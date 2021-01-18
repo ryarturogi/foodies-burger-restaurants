@@ -155,6 +155,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-menu-list {
   width: 100%;
@@ -189,7 +190,7 @@ export default {
 .c-menu-list-item__title {
   margin: 0 0 2rem;
   padding: 0 2rem;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 3rem;
@@ -201,7 +202,7 @@ export default {
 .c-menu-list-item__description {
   margin: 0 0 3.85rem;
   padding: 0 2rem;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.8rem;
   line-height: 2.6rem;
 
@@ -220,7 +221,7 @@ export default {
   }
 }
 .c-menu-list-item__category {
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: #78909c;
@@ -234,7 +235,7 @@ export default {
   justify-content: center;
   align-items: center;
   background: $color-yellow-og;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.6rem;
@@ -258,7 +259,7 @@ export default {
   padding: 1rem 1.8rem;
   border-radius: 8px;
   background: $color-yellow-200;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.7rem;
@@ -282,7 +283,7 @@ export default {
   padding: 1rem 1.8rem;
   border-radius: 8px;
   background: $color-black;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 2rem;
   line-height: 2.7rem;
   color: $color-yellow-og;
@@ -310,7 +311,7 @@ export default {
   margin: 0 auto 2.2rem;
 }
 .c-menu-list-empty__title {
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.4rem;
@@ -320,7 +321,7 @@ export default {
 .c-menu-list-empty__description {
   width: 100%;
   max-width: 52.3rem;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 2.5rem;

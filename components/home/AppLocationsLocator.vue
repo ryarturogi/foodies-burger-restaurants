@@ -164,6 +164,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 @import "@/assets/scss/base/utilities.scss";
 
 .l-locator {
@@ -182,7 +183,7 @@ export default {
 
 .c-location__heading {
   margin: 0 0 3.2rem;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 2.8rem;
   font-weight: 700;
   line-height: 2.8rem;
@@ -217,7 +218,7 @@ export default {
   justify-content: center;
   align-items: center;
   border: 1px solid $color-gray-500;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 1.4rem;
   font-weight: 800;
   line-height: 1.8rem;
@@ -306,7 +307,7 @@ export default {
   }
 
   &::placeholder {
-    font-family: Open Sans;
+    font-family: $font-stack-base;
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.8rem;
@@ -341,14 +342,14 @@ export default {
 }
 
 .c-results-item__heading {
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.4rem;
 }
 
 .c-results-item__info {
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
@@ -414,7 +415,7 @@ export default {
 
 .c-results-empty__title {
   margin: 0 auto 1.7rem;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.4rem;

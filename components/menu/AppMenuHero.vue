@@ -16,6 +16,7 @@
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-hero-menu {
   height: 67.2rem;
@@ -64,7 +65,7 @@
   position: relative;
   z-index: 1;
   order: 2;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 3.6rem;

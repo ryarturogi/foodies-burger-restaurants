@@ -37,6 +37,7 @@ export default {};
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-hero {
   width: 100%;
@@ -96,7 +97,7 @@ export default {};
   margin: 4.2rem 0 1.8rem;
   position: relative;
   z-index: 1;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 3.8rem;
@@ -136,7 +137,7 @@ export default {};
   }
 }
 .c-hero__subtitle {
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.8rem;
   line-height: 2.5rem;
   margin: 0 0 2.6rem;
@@ -147,7 +148,7 @@ export default {};
   }
 }
 .c-hero__action {
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 2.6rem;

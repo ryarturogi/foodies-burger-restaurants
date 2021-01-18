@@ -85,6 +85,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 @import "@/assets/scss/base/utilities.scss";
 
 .l-menu {
@@ -110,7 +111,7 @@ export default {
 
 .c-menu__item {
   margin: 0 3rem 0 0;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 22px;

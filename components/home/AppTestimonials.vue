@@ -91,6 +91,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-testimonials {
   max-height: 63.8rem;
@@ -187,7 +188,7 @@ export default {
 
 .c-testimonials-slide__title {
   margin: 0 auto;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 3rem;
@@ -208,7 +209,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2rem;
   font-weight: normal;
   line-height: 2.4rem;
@@ -238,7 +239,7 @@ export default {
   display: flex;
   justify-content: space-between;
   position: relative !important;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.1rem;

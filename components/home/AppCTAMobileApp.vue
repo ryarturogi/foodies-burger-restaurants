@@ -104,6 +104,7 @@ export default {};
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-cta-mobile-app {
   width: 100%;
@@ -124,7 +125,7 @@ export default {};
   margin: 0 auto 4.5rem;
   padding: 0 1rem;
   border-radius: 4px;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 3rem;
   font-weight: 800;
   line-height: 3.8rem;
@@ -262,7 +263,7 @@ export default {};
   width: 29.85rem;
   max-width: 100%;
   margin: 0 auto 2.5rem;
-  font-family: Roboto;
+  font-family: $font-stack-subheading;
   font-weight: 800;
   font-size: 2.2rem;
   line-height: 2.6rem;
@@ -271,7 +272,7 @@ export default {};
 }
 .c-cta-mobile-app-cards__info {
   width: 29.85rem;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 1.8rem;
   line-height: 2.1rem;
   text-align: center;

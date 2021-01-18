@@ -139,7 +139,8 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
-//  d-flex justify-content-center align-items-center p-5
+@import "@/assets/scss/base/typography.scss";
+
 .l-menu-filters {
   margin: 2rem auto;
   padding: 2.5rem;
@@ -184,7 +185,7 @@ export default {
   outline: none;
   border: 0;
   background: transparent;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.8rem;
   line-height: 2.4rem;
 }
@@ -202,7 +203,7 @@ export default {
   padding: 0;
   position: relative;
   overflow: hidden;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 1.8rem;
   font-weight: 700;
   line-height: 2.2rem;
@@ -287,7 +288,7 @@ export default {
   width: auto;
   width: fit-content;
   margin: 0 1.6rem 5rem;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3rem;

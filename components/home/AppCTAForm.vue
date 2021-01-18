@@ -266,6 +266,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/scss/base/breakpoints.scss";
 @import "@/assets/scss/abstracts/variables.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-cta-form {
   width: 100%;
@@ -294,7 +295,7 @@ export default {
 
 .c-cta-form__title {
   margin: 0 auto 1.7rem;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 3.6rem;
   font-weight: 700;
   line-height: 3.6rem;
@@ -306,7 +307,7 @@ export default {
   width: 69.8rem;
   max-width: 100%;
   margin: 0 auto 6.2rem;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 3.2rem;
@@ -323,7 +324,7 @@ export default {
 .c-cta-form__label {
   margin-bottom: 0.5rem;
   display: block;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.2rem;
   line-height: 1.634rem;
   color: $color-white;
@@ -361,7 +362,7 @@ export default {
   border: 0;
   border-radius: 4px;
   float: right;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.2rem;
@@ -389,7 +390,7 @@ export default {
 
 .c-cta-form-empty__title {
   margin: 0 auto 1.7rem;
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 3rem;
   font-weight: 700;
   line-height: 3rem;
@@ -404,7 +405,7 @@ export default {
 
 .c-cta-form-empty__description {
   margin: 0 auto 3.4rem;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.8rem;
   line-height: 2.8rem;
   text-align: center;
@@ -419,7 +420,7 @@ export default {
 .c-cta-form-empty__button {
   margin: 0 auto 2rem;
   padding: 1.25rem 1.5rem;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.2rem;

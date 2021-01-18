@@ -44,6 +44,7 @@ export default {};
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-about-cta {
   display: grid;
@@ -69,7 +70,7 @@ export default {};
 }
 
 .c-about-cta__title {
-  font-family: Druk Text Wide;
+  font-family: $font-stack-heading;
   font-size: 3.6rem;
   font-weight: 700;
   line-height: 3.6rem;
@@ -109,7 +110,7 @@ export default {};
 
 .c-about-cta-content__title {
   margin: 0 0 2.7rem;
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 2.6rem;
@@ -117,13 +118,13 @@ export default {};
 
 .c-about-cta-content__text {
   margin: 0 0 5.4rem;
-  font-family: Open Sans;
+  font-family: $font-stack-base;
   font-size: 1.8rem;
   line-height: 2.5rem;
 }
 
 .c-about-cta-content__action {
-  font-family: Syne;
+  font-family: $font-stack-subheading;
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 2.6rem;
