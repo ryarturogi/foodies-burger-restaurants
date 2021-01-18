@@ -139,13 +139,14 @@
             </div>
             <div class="form-group">
               <button
-                class="c-cta-form__submit btn-warning"
                 :class="{
-                  'btn-secondary color-white':
-                    !formData.name && !formData.email,
+                  'btn-warning': formData.name && formData.email,
                   'btn-success': formSent,
                   'btn-danger': error,
+                  'btn-secondary color-white':
+                    !formData.name && !formData.email,
                 }"
+                class="c-cta-form__submit"
                 :disabled="!formData.name && !formData.email"
                 type="submit"
                 @click="sendForm"
@@ -363,8 +364,8 @@ export default {
   border-radius: 4px;
   float: right;
   font-family: $font-stack-base;
-  font-size: $text-xl;
-  font-weight: $bold;
+  font-size: $text-lg;
+  font-weight: $bolder;
   line-height: 2.2rem;
   outline: none;
 }
