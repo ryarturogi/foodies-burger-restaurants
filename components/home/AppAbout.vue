@@ -71,14 +71,18 @@ export default {};
 
 .c-about-cta__title {
   font-family: $font-stack-heading;
-  font-size: $text-5xl;
+  font-size: $text-3xl;
   font-weight: $bold;
-  line-height: 3.6rem;
+  line-height: 3.2rem;
   text-align: right;
   color: $color-white;
   text-transform: uppercase;
   white-space: nowrap;
 
+  @include s {
+    font-size: $text-4xl;
+    line-height: 3.6rem;
+  }
   @include m {
     font-size: $text-6xl;
     line-height: 4rem;
