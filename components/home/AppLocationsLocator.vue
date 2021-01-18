@@ -52,6 +52,7 @@
           name="fade"
           tag="nav"
           class="c-results"
+          mode="out-in"
         >
           <li
             v-for="location in filteredLocations"
@@ -97,6 +98,7 @@
 
 <script>
 import mapboxgl from "mapbox-gl";
+import { removeAccents } from "@/utils";
 
 const locationsApi = process.env.ELANIIN_LOCATIONS_API;
 
@@ -148,7 +150,8 @@ export default {
 
     filterLocationsByName(items) {
       return items.filter((item) => {
-        return item.name.toLowerCase().includes(this.search.toLowerCase());
+        const value = removeAccents(item.name).toLowerCase();
+        return value.includes(this.search.toLowerCase());
       });
     },
     setTypeHandler(type) {
@@ -187,9 +190,10 @@ export default {
   margin: 5rem auto;
   display: flex;
   justify-content: center;
+  min-height: 75vh;
 
-  @include l {
-    min-height: fit-content;
+  @include m {
+    min-height: 58rem;
   }
 }
 
