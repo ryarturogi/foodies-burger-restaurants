@@ -290,7 +290,6 @@ export default {
 .c-search-bar__field {
   width: 30rem;
   height: fit-content;
-  min-height: 4.5rem;
   max-width: 100%;
   border: 0;
   display: flex;
