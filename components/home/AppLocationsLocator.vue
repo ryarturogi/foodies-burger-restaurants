@@ -349,8 +349,13 @@ export default {
 
 .c-results-item__info {
   font-family: $font-stack-base;
-  font-size: $text-xl;
-  line-height: 2.2rem;
+  font-size: $text-base;
+  line-height: 1.8rem;
+
+  @include m {
+    font-size: $text-lg;
+    line-height: 2rem;
+  }
 }
 
 .c-results-item__action {
@@ -358,6 +363,7 @@ export default {
   width: 100%;
   max-width: 100%;
   padding: 1.5rem 2.2rem;
+  border: 1px solid $color-black;
   border-radius: 4px;
   text-align: left;
   color: $color-black;
@@ -366,10 +372,12 @@ export default {
 
   &:hover {
     background: $color-yellow-300;
+    border-color: $color-yellow-300;
   }
 
   &--selected {
     background: $color-yellow-400;
+    border-color: $color-yellow-400;
   }
 }
 
