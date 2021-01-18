@@ -5,13 +5,7 @@
       key="1"
       class="l-menu-list container"
     >
-      <transition-group
-        tag="ul"
-        name="list"
-        mode="out-in"
-        class="c-menu-list"
-        @before-leave="beforeLeave"
-      >
+      <transition-group tag="ul" name="list" mode="out-in" class="c-menu-list">
         <li
           v-for="item in paginatedMenu"
           :key="item.id"
