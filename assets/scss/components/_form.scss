@@ -18,8 +18,8 @@
   height: 5rem;
   border-radius: 10px;
   box-sizing: border-box;
-  font-family: Noto Sans;
-  font-size: $text-xl;
+  font-family: $font-stack-base;
+  font-size: $text-lg;
   line-height: 2.2rem;
 
   &--outlined {
