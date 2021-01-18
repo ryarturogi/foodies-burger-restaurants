@@ -10,7 +10,7 @@
           :class="{
             'c-type-selector__option--active': type === 'takeaway',
           }"
-          @click="setType('takeaway')"
+          @click="setTypeHandler('takeaway')"
         >
           <div class="c-type-selector__icon">
             <img src="@/assets/img/SVG/takeaway-icon.svg" alt="takeaway" />
@@ -22,7 +22,7 @@
           :class="{
             'c-type-selector__option--active': type === 'delivery',
           }"
-          @click="setType('delivery')"
+          @click="setTypeHandler('delivery')"
         >
           <div class="c-type-selector__icon">
             <img src="@/assets/img/SVG/delivery-icon.svg" alt="delivery" />
@@ -42,20 +42,19 @@
             class="c-search-bar__field"
             type="text"
             placeholder="Buscar nombre o dirección"
-            @keyup.enter="getLocations"
           />
         </div>
       </div>
       <transition-group name="list" mode="out-in">
         <transition-group
-          v-if="locations && locations.length > 0"
+          v-if="filteredLocations && filteredLocations.length > 0"
           key="1"
           name="fade"
           tag="nav"
           class="c-results"
         >
           <li
-            v-for="location in locations"
+            v-for="location in filteredLocations"
             :key="location.id"
             class="c-results__item"
           >
@@ -77,7 +76,7 @@
           </li>
         </transition-group>
         <div
-          v-else-if="!locations.length"
+          v-else-if="!filteredLocations.length"
           key="2"
           class="c-results c-results__empty"
         >
@@ -111,14 +110,12 @@ export default {
       map: {},
     };
   },
-  head: {
-    link: [
-      {
-        rel: "stylesheet",
-        type: "text/css",
-        href: "https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css",
-      },
-    ],
+  computed: {
+    filteredLocations() {
+      return this.filterLocationsByName(
+        this.filterLocationsByType(this.locations)
+      );
+    },
   },
   mounted() {
     this.getLocations();
@@ -126,10 +123,41 @@ export default {
   },
   methods: {
     async getLocations() {
-      const locations = await this.$axios.$get(locationsApi, {
+      const res = await this.$axios.$get(locationsApi, {
         params: { type: this.type, query: this.search },
       });
-      this.locations = locations.data;
+      this.locations = res.data;
+    },
+    createMap() {
+      mapboxgl.accessToken = process.env.MAPBOXAPI;
+
+      try {
+        this.map = new mapboxgl.Map({
+          container: "map",
+          style: "mapbox://styles/mapbox/streets-v11",
+          zoom: 9,
+          center: [-88.916663, 13.83333],
+        });
+      } catch (e) {
+        console.log(e.message);
+      }
+    },
+    filterLocationsByType(items) {
+      return items.filter((item) => !item.type.indexOf(this.type));
+    },
+
+    filterLocationsByName(items) {
+      return items.filter((item) => {
+        return item.name.toLowerCase().includes(this.search.toLowerCase());
+      });
+    },
+    setTypeHandler(type) {
+      this.type = type;
+      this.search = "";
+      this.getLocations();
+    },
+    setSearchHandler(searchVal) {
+      this.search = searchVal.toLowerCase();
       this.search = "";
     },
     setLocation(loc) {
@@ -142,19 +170,6 @@ export default {
       this.map.flyTo({
         center: LngLat,
         zoom: 12,
-      });
-    },
-    setType(type) {
-      this.type = type;
-      this.search = "";
-    },
-    createMap() {
-      mapboxgl.accessToken = process.env.MAPBOXAPI;
-      this.map = new mapboxgl.Map({
-        container: "map",
-        style: "mapbox://styles/mapbox/streets-v11",
-        zoom: 9,
-        center: [-88.916663, 13.83333],
       });
     },
   },

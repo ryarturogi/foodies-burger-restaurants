@@ -31,6 +31,7 @@ export default {
     ],
   },
   env: {
+    ELANIIN_API_PATH: process.env.ELANIIN_API_PATH,
     ELANIIN_LOCATIONS_API: process.env.ELANIIN_LOCATIONS_API,
     ELANIIN_CONTACT_API: process.env.ELANIIN_CONTACT_API,
     ELANIIN_CATEGORIES_API: process.env.ELANIIN_CATEGORIES_API,
@@ -61,7 +62,7 @@ export default {
 
   proxy: {
     "/api": {
-      target: "https://api.elaniin.dev",
+      target: process.env.ELANIIN_API_PATH,
       pathRewrite: {
         "^/api": "/",
       },

@@ -120,9 +120,9 @@ export default {
       return this.filterMenuByName(this.filterMenuByCategory(this.menu));
     },
   },
-  async created() {
-    await this.getCategories();
-    await this.getMenu();
+  mounted() {
+    this.getCategories();
+    this.getMenu();
   },
 
   methods: {
