@@ -160,7 +160,7 @@ export default {};
   }
 }
 .c-hero__burger {
-  width: 3$text-sm;
+  width: 31.2rem;
   margin: 0 auto;
   order: 1;
 
