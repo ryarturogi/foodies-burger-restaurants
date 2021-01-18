@@ -65,6 +65,7 @@ export default {};
     min-height: 87.4rem;
     padding: 0 2rem;
     background: url("~assets/img/SVG/hero-bg.svg") no-repeat top right;
+    background-size: contain;
   }
   @include xl {
     min-height: 87.4rem;
