@@ -71,8 +71,8 @@ export default {};
 
 .c-about-cta__title {
   font-family: $font-stack-heading;
-  font-size: 3.6rem;
-  font-weight: 700;
+  font-size: $text-5xl;
+  font-weight: $bold;
   line-height: 3.6rem;
   text-align: right;
   color: $color-white;
@@ -80,11 +80,11 @@ export default {};
   white-space: nowrap;
 
   @include m {
-    font-size: 4rem;
+    font-size: $text-6xl;
     line-height: 4rem;
   }
   @include l {
-    font-size: 5rem;
+    font-size: $text-7xl;
     line-height: 5rem;
   }
 }
@@ -111,8 +111,8 @@ export default {};
 .c-about-cta-content__title {
   margin: 0 0 2.7rem;
   font-family: $font-stack-subheading;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: $text-2xl;
+  font-weight: $bold;
   line-height: 2.6rem;
 }
 
@@ -125,8 +125,8 @@ export default {};
 
 .c-about-cta-content__action {
   font-family: $font-stack-subheading;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: $text-2xl;
+  font-weight: $bold;
   line-height: 2.6rem;
   color: $color-black;
 }

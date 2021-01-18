@@ -112,8 +112,8 @@ export default {
 .c-menu__item {
   margin: 0 3rem 0 0;
   font-family: $font-stack-subheading;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
   line-height: 22px;
   color: $color-black;
   text-decoration: none;
@@ -172,7 +172,7 @@ export default {
   width: fit-content;
   margin: 0 1.6rem 5rem;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 3rem;
   color: $color-black;
   transition: ease all 0.3s;

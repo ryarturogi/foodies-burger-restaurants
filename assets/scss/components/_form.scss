@@ -4,8 +4,8 @@
   width: 100%;
   border-radius: 4px;
   display: inline;
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-size: $text-xl;
+  font-weight: $bold-lighter;
   line-height: 5rem;
   text-align: center;
   margin: 0 auto 2rem;
@@ -19,7 +19,7 @@
   border-radius: 10px;
   box-sizing: border-box;
   font-family: Noto Sans;
-  font-size: 1.6rem;
+  font-size: $text-xl;
   line-height: 2.2rem;
 
   &--outlined {
@@ -45,8 +45,8 @@
 .caption {
   display: flex;
   align-items: center;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  font-size: $text-sm;
+  line-height: $text-lg;
 
   &--outlined {
     color: #cbd5e0 !important;

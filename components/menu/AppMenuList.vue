@@ -183,7 +183,7 @@ export default {
   list-style: none;
 
   img {
-    margin: 0 0 1.4rem;
+    margin: 0 0 $text-base;
     border-radius: 1rem;
   }
 }
@@ -192,7 +192,7 @@ export default {
   padding: 0 2rem;
   font-family: $font-stack-subheading;
   font-size: 2.6rem;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 3rem;
 
   @include m {
@@ -222,7 +222,7 @@ export default {
 }
 .c-menu-list-item__category {
   font-family: $font-stack-base;
-  font-size: 1.6rem;
+  font-size: $text-xl;
   line-height: 2.4rem;
   color: #78909c;
 }
@@ -236,13 +236,13 @@ export default {
   align-items: center;
   background: $color-yellow-og;
   font-family: $font-stack-heading;
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 1.6rem;
+  font-weight: $bold;
+  font-size: $text-base;
+  line-height: $text-lg;
   color: $color-black;
 
   &--currency {
-    width: 1.4rem;
+    width: $text-base;
 
     margin: 0 !important;
     padding: 0;
@@ -260,8 +260,8 @@ export default {
   border-radius: 8px;
   background: $color-yellow-200;
   font-family: $font-stack-base;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: $text-xl;
+  font-weight: $bold-light;
   line-height: 2.7rem;
 
   &--disabled {
@@ -284,7 +284,7 @@ export default {
   border-radius: 8px;
   background: $color-black;
   font-family: $font-stack-base;
-  font-size: 2rem;
+  font-size: $text-xl;
   line-height: 2.7rem;
   color: $color-yellow-og;
 }
@@ -312,8 +312,8 @@ export default {
 }
 .c-menu-list-empty__title {
   font-family: $font-stack-subheading;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
   line-height: 2.4rem;
   text-align: center;
   margin: 0 auto 0.8rem;
@@ -323,7 +323,7 @@ export default {
   max-width: 52.3rem;
   font-family: $font-stack-base;
   font-size: 1.8rem;
-  font-weight: 400;
+
   line-height: 2.5rem;
   text-align: center;
 }

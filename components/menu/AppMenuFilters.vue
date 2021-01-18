@@ -205,7 +205,7 @@ export default {
   overflow: hidden;
   font-family: $font-stack-subheading;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 2.2rem;
 
   &::before {
@@ -290,7 +290,7 @@ export default {
   margin: 0 1.6rem 5rem;
   font-family: $font-stack-subheading;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 3rem;
   position: relative;
   color: $color-white;

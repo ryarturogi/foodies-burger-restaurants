@@ -127,14 +127,14 @@ export default {};
   border-radius: 4px;
   font-family: $font-stack-heading;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: $bolder;
   line-height: 3.8rem;
   text-align: center;
   position: relative;
 
   @include m {
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: $bold;
     line-height: 3.8rem;
   }
 
@@ -255,8 +255,8 @@ export default {};
   justify-content: center;
   align-items: center;
   background: $color-yellow-og;
-  font-size: 2rem;
-  font-weight: 800;
+  font-size: $text-xl;
+  font-weight: $bolder;
   color: $color-white;
 }
 .c-cta-mobile-app-cards__title {
@@ -264,8 +264,8 @@ export default {};
   max-width: 100%;
   margin: 0 auto 2.5rem;
   font-family: $font-stack-subheading;
-  font-weight: 800;
-  font-size: 2.2rem;
+  font-weight: $bolder;
+  font-size: $text-2xl;
   line-height: 2.6rem;
   text-align: center;
   color: $color-black;

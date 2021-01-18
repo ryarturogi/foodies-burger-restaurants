@@ -190,14 +190,14 @@ export default {
   margin: 0 auto;
   font-family: $font-stack-heading;
   font-size: 2.6rem;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 3rem;
   text-align: center;
 
   @include m {
     max-width: 44vw;
-    font-size: 3.2rem;
-    font-weight: 700;
+    font-size: $text-4xl;
+    font-weight: $bold;
     line-height: 4.2rem;
   }
 }
@@ -210,13 +210,13 @@ export default {
   justify-content: center;
   align-items: center;
   font-family: $font-stack-subheading;
-  font-size: 2rem;
+  font-size: $text-xl;
   font-weight: normal;
   line-height: 2.4rem;
   text-align: center;
 
   @include m {
-    font-size: 2.2rem;
+    font-size: $text-2xl;
     font-weight: normal;
     line-height: 2.6rem;
   }
@@ -228,8 +228,8 @@ export default {
   display: grid;
   position: relative;
   grid-auto-flow: column;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
 }
 .c-testimonials__counter {
   width: 40px;
@@ -240,15 +240,15 @@ export default {
   justify-content: space-between;
   position: relative !important;
   font-family: $font-stack-subheading;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
   line-height: 2.1rem;
 
   .swiper-pagination-current,
   .swiper-pagination-total {
     font-family: Anonymous Pro;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: $text-xl;
+    font-weight: $bold;
     line-height: 2.1rem;
   }
 }

@@ -99,18 +99,18 @@ export default {};
   z-index: 1;
   font-family: $font-stack-heading;
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: $bolder;
   line-height: 3.8rem;
 
   @include m {
     margin: 0rem 0 1.8rem;
     font-size: 3.9rem;
-    font-weight: 700;
+    font-weight: $bold;
     line-height: 4rem;
   }
 
   @include xl {
-    font-size: 6rem;
+    font-size: $text-8xl;
     line-height: 6rem;
   }
 
@@ -149,8 +149,8 @@ export default {};
 }
 .c-hero__action {
   font-family: $font-stack-subheading;
-  font-size: 2.2rem;
-  font-weight: 700;
+  font-size: $text-2xl;
+  font-weight: $bold;
   line-height: 2.6rem;
   text-decoration: none;
   color: $color-black;
@@ -160,7 +160,7 @@ export default {};
   }
 }
 .c-hero__burger {
-  width: 31.2rem;
+  width: 3$text-sm;
   margin: 0 auto;
   order: 1;
 

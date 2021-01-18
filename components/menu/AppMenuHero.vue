@@ -67,7 +67,7 @@
   order: 2;
   font-family: $font-stack-heading;
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 3.6rem;
   color: $color-white;
 
@@ -76,12 +76,12 @@
   }
 
   @include m {
-    font-size: 4rem;
+    font-size: $text-6xl;
     line-height: 4rem;
     order: 1;
   }
   @include l {
-    font-size: 6rem;
+    font-size: $text-8xl;
     line-height: 6rem;
   }
 

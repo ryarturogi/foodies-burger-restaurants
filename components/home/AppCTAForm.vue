@@ -296,8 +296,8 @@ export default {
 .c-cta-form__title {
   margin: 0 auto 1.7rem;
   font-family: $font-stack-heading;
-  font-size: 3.6rem;
-  font-weight: 700;
+  font-size: $text-5xl;
+  font-weight: $bold;
   line-height: 3.6rem;
   text-align: center;
   color: $color-white;
@@ -308,8 +308,8 @@ export default {
   max-width: 100%;
   margin: 0 auto 6.2rem;
   font-family: $font-stack-subheading;
-  font-size: 2.4rem;
-  font-weight: 400;
+  font-size: $text-2xl;
+
   line-height: 3.2rem;
   text-align: center;
   color: $color-white;
@@ -325,7 +325,7 @@ export default {
   margin-bottom: 0.5rem;
   display: block;
   font-family: $font-stack-base;
-  font-size: 1.2rem;
+  font-size: $text-sm;
   line-height: 1.634rem;
   color: $color-white;
 
@@ -346,7 +346,7 @@ export default {
 
 .c-cta-form__textarea {
   height: 13.2rem;
-  padding: 1.4rem;
+  padding: $text-base;
   background: $color-black;
   border-radius: 4px;
 
@@ -363,8 +363,8 @@ export default {
   border-radius: 4px;
   float: right;
   font-family: $font-stack-base;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
   line-height: 2.2rem;
   outline: none;
 }
@@ -392,13 +392,13 @@ export default {
   margin: 0 auto 1.7rem;
   font-family: $font-stack-heading;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 3rem;
   text-align: center;
   color: $color-white;
 
   @include m {
-    font-size: 3.6rem;
+    font-size: $text-5xl;
     line-height: 3.6rem;
   }
 }
@@ -412,7 +412,7 @@ export default {
   color: $color-white;
 
   @include m {
-    font-size: 2.4rem;
+    font-size: $text-2xl;
     line-height: 3.3rem;
   }
 }
@@ -421,8 +421,8 @@ export default {
   margin: 0 auto 2rem;
   padding: 1.25rem 1.5rem;
   font-family: $font-stack-base;
-  font-size: 1.6rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
   line-height: 2.2rem;
   text-align: center;
 }

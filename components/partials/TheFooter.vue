@@ -46,6 +46,7 @@ export default {};
 <style lang="scss" scoped>
 @import "@/assets/scss/abstracts/variables.scss";
 @import "@/assets/scss/base/breakpoints.scss";
+@import "@/assets/scss/base/typography.scss";
 
 .l-footer {
   width: 100%;
@@ -103,7 +104,7 @@ export default {};
 .c-footer-menu__item {
   margin: 0;
   padding: 1rem;
-  font-size: 1.6rem;
+  font-size: $text-xl;
   line-height: 1.875rem;
 
   a {

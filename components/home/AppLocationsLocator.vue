@@ -184,8 +184,8 @@ export default {
 .c-location__heading {
   margin: 0 0 3.2rem;
   font-family: $font-stack-heading;
-  font-size: 2.8rem;
-  font-weight: 700;
+  font-size: $text-3xl;
+  font-weight: $bold;
   line-height: 2.8rem;
   width: min-content;
 
@@ -199,7 +199,7 @@ export default {
     line-height: 3.5rem;
   }
   @include l {
-    font-size: 4rem;
+    font-size: $text-6xl;
     line-height: 4rem;
   }
 }
@@ -219,8 +219,8 @@ export default {
   align-items: center;
   border: 1px solid $color-gray-500;
   font-family: $font-stack-subheading;
-  font-size: 1.4rem;
-  font-weight: 800;
+  font-size: $text-base;
+  font-weight: $bolder;
   line-height: 1.8rem;
   filter: invert(0);
   color: $color-black;
@@ -229,13 +229,13 @@ export default {
   transition: ease all 0.3s;
 
   @include m {
-    font-size: 1.6rem;
+    font-size: $text-xl;
   }
   @include l {
-    font-size: 2rem;
+    font-size: $text-xl;
   }
   @include xl {
-    font-size: 2.4rem;
+    font-size: $text-2xl;
   }
 
   &--active {
@@ -299,24 +299,24 @@ export default {
   background: transparent;
   outline: none;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: $bold;
 
   @include l {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: $bold;
   }
 
   &::placeholder {
     font-family: $font-stack-base;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: $text-base;
+    font-weight: $bold;
     line-height: 1.8rem;
     text-transform: uppercase;
     color: $color-gray-500;
 
     @include l {
       font-size: 1.8rem;
-      font-weight: 700;
+      font-weight: $bold;
       line-height: 2.5rem;
     }
   }
@@ -343,14 +343,14 @@ export default {
 
 .c-results-item__heading {
   font-family: $font-stack-subheading;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
   line-height: 2.4rem;
 }
 
 .c-results-item__info {
   font-family: $font-stack-base;
-  font-size: 1.6rem;
+  font-size: $text-xl;
   line-height: 2.2rem;
 }
 
@@ -416,8 +416,8 @@ export default {
 .c-results-empty__title {
   margin: 0 auto 1.7rem;
   font-family: $font-stack-subheading;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: $text-xl;
+  font-weight: $bold;
   line-height: 2.4rem;
   text-align: center;
 }

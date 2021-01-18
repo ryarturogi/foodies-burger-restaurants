@@ -1,3 +1,5 @@
+@import "@/assets/scss/base/typography";
+
 // Syne
 
 @font-face {
@@ -7,7 +9,7 @@
     url("~assets/fonts/Syne-Extra.woff2") format("woff2"),
     url("~assets/fonts/Syne-Extra.woff") format("woff"),
     url("~assets/fonts/Syne-Extra.ttf") format("truetype");
-  font-weight: 900;
+  font-weight: $bolder-extra;
   font-style: normal;
   font-display: swap;
 }
@@ -96,7 +98,7 @@
     url("~assets/fonts/DrukTextWide-Heavy.woff2") format("woff2"),
     url("~assets/fonts/DrukTextWide-Heavy.woff") format("woff"),
     url("~assets/fonts/DrukTextWide-Heavy.ttf") format("truetype");
-  font-weight: 900;
+  font-weight: $bolder-extra;
   font-style: normal;
   font-display: swap;
 }
@@ -109,7 +111,7 @@
     url("~assets/fonts/DrukTextWide-HeavyItalic.woff2") format("woff2"),
     url("~assets/fonts/DrukTextWide-HeavyItalic.woff") format("woff"),
     url("~assets/fonts/DrukTextWide-HeavyItalic.ttf") format("truetype");
-  font-weight: 900;
+  font-weight: $bolder-extra;
   font-style: italic;
   font-display: swap;
 }
@@ -135,7 +137,7 @@
     url("~assets/fonts/DrukTextWide-Medium.woff2") format("woff2"),
     url("~assets/fonts/DrukTextWide-Medium.woff") format("woff"),
     url("~assets/fonts/DrukTextWide-Medium.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: $bold-lighter;
   font-style: normal;
   font-display: swap;
 }
@@ -148,7 +150,7 @@
     url("~assets/fonts/DrukTextWide-MediumItalic.woff2") format("woff2"),
     url("~assets/fonts/DrukTextWide-MediumItalic.woff") format("woff"),
     url("~assets/fonts/DrukTextWide-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
+  font-weight: $bold-lighter;
   font-style: italic;
   font-display: swap;
 }
