@@ -114,6 +114,7 @@ $ yarn generate
 
 ### Environment Variables
 
+- ELANIIN_API_PATH
 - ELANIIN_LOCATIONS_API
 - ELANIIN_CONTACT_API
 - ELANIIN_CATEGORIES_API
