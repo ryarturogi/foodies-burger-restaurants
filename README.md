@@ -1,9 +1,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-<a href="https://github.com/ryarturogi/foodies-elaniin">
-  <img src="https://foodies-elaniin.herokuapp.com/_nuxt/img/logo.2b58803.svg" alt="Logo" width="200">
-</a>
+  <a href="https://github.com/ryarturogi/foodies-elaniin">
+    <img src="https://foodies-elaniin.herokuapp.com/_nuxt/img/logo.2b58803.svg" alt="Logo" width="200">
+  </a>
+</p>
 
 <p align="center">
   <a href="https://github.com/ryarturogi/foodies-elaniin"><strong>Explore the docs »</strong></a>
@@ -11,7 +12,6 @@
   <a href="https://github.com/ryarturogi/foodies-elaniin/issues">Report Bug</a>
   ·
   <a href="https://github.com/ryarturogi/foodies-elaniin/issues">Request Feature</a>
-</p>
 </p>
 
 <!-- TABLE OF CONTENTS -->
@@ -36,17 +36,13 @@
 </ol>
 </details>
 
-<br />
-
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+# About The Project
 
 A famous hamburger restaurant app for searching near store locations and a dynamic hamburgers menu where you can find the perfect hamburger for you belly.
 
-<br />
-
-### Built With
+## Built With
 
 - [VueJs](https://vuejs.org/)
 - [NuxtJs](https://nuxtjs.org/)
@@ -57,17 +53,12 @@ A famous hamburger restaurant app for searching near store locations and a dynam
 - [AOS Animations](https://michalsnik.github.io/aos/)
 
 <!-- GETTING STARTED -->
-<br />
 
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-<br />
-<br />
 
 ## Prerequisites
-
-<br />
 
 - Install Yarn - doc: https://www.yarnpkg.com/
 
@@ -77,13 +68,19 @@ To get a local copy up and running follow these simple steps.
 $ yarn --v
 ```
 
-<br />
+# Installation
 
-## Installation
+## Docker
 
-<br />
+You can use docker to pull an image of entire project fully dockerize
 
-1. Clone the repo
+[Foodies Docker Hub](https://hub.docker.com/repository/docker/ryarturogi/foodies)
+
+or you can clone the repo from Github
+
+## Github
+
+1. Clone the repo from Github
 
 ```sh
 $ git clone https://github.com/ryarturogi/foodies-elaniin.git
@@ -107,22 +104,17 @@ $ yarn start
 $ yarn generate
 ```
 
-<br />
 <!-- ACKNOWLEDGEMENTS -->
 
-## Acknowledgements
+# Acknowledgements
 
-### Environment Variables
+## Environment Variables
 
 - ELANIIN_API_PATH
-- ELANIIN_LOCATIONS_API
-- ELANIIN_CONTACT_API
-- ELANIIN_CATEGORIES_API
-- ELANIIN_MENU_API
 - MAPBOXAPI
   - Doc: https://docs.mapbox.com/
 
-#### Things you may want to cover:
+### Things you may want to cover:
 
 - [VueJs version 2](https://vuejs.org/v2/guide/)
 - [NuxtJs version 2.14+](https://nuxtjs.org/docs/2.x/get-started)

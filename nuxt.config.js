@@ -32,10 +32,6 @@ export default {
   },
   env: {
     ELANIIN_API_PATH: process.env.ELANIIN_API_PATH,
-    ELANIIN_LOCATIONS_API: process.env.ELANIIN_LOCATIONS_API,
-    ELANIIN_CONTACT_API: process.env.ELANIIN_CONTACT_API,
-    ELANIIN_CATEGORIES_API: process.env.ELANIIN_CATEGORIES_API,
-    ELANIIN_MENU_API: process.env.ELANIIN_MENU_API,
     MAPBOXAPI: process.env.MAPBOXAPI,
   },
   css: ["~/assets/scss/main.scss"],
@@ -58,16 +54,30 @@ export default {
     "@nuxtjs/proxy",
   ],
 
-  axios: {},
-
-  proxy: {
-    "/api": {
-      target: process.env.ELANIIN_API_PATH,
-      pathRewrite: {
-        "^/api": "/",
-      },
-    },
+  server: {
+    port: 3000, // default: 3000
+    host: "0.0.0.0", // default: localhost,
+    timing: false,
   },
+
+  axios: {
+    baseURL: "https://api.elaniin.dev/api",
+    proxy: true,
+    proxyHeaders: false,
+    credentials: false,
+  },
+
+  proxy: [
+    [
+      "/api",
+      {
+        target: "https://api.elaniin.dev/api",
+        pathRewrite: {
+          "^/api": "/",
+        },
+      },
+    ],
+  ],
 
   build: {
     extend(config, { isDev, isClient }) {

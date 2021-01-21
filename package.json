@@ -2,10 +2,15 @@
   "name": "foodies-elaniin",
   "version": "1.0.0",
   "private": true,
+  "nuxt": {
+    "host": "0.0.0.0",
+    "port": "3000",
+    "timing": false
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start": "HOST=0.0.0.0 nuxt start",
     "generate": "nuxt generate"
   },
   "dependencies": {

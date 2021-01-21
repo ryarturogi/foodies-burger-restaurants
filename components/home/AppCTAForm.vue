@@ -179,7 +179,7 @@
 <script>
 import validator from "validator";
 
-const contactApi = process.env.ELANIIN_CONTACT_API;
+const contactApi = `${process.env.ELANIIN_API_PATH}/contact`;
 
 export default {
   data() {

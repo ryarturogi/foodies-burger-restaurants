@@ -100,7 +100,7 @@
 import mapboxgl from "mapbox-gl";
 import { removeAccents } from "@/utils";
 
-const locationsApi = process.env.ELANIIN_LOCATIONS_API;
+const locationsApi = `${process.env.ELANIIN_API_PATH}/locations`;
 
 export default {
   data() {
