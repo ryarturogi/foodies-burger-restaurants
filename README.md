@@ -5,7 +5,9 @@
     <img src="https://foodies-elaniin.herokuapp.com/_nuxt/img/logo.2b58803.svg" alt="Logo" width="200">
   </a>
   <br />
-  ![image](https://user-images.githubusercontent.com/8452197/132951874-f981e7ee-b70c-4bbd-82cf-52dca248ab22.png)
+  
+  ![image](https://user-images.githubusercontent.com/8452197/132951940-cd31a491-fa22-49c5-9297-de3c6d25931a.png)
+
 </p>
 
 <p align="center">
