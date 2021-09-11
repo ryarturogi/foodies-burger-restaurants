@@ -4,6 +4,8 @@
   <a href="https://github.com/ryarturogi/foodies-elaniin">
     <img src="https://foodies-elaniin.herokuapp.com/_nuxt/img/logo.2b58803.svg" alt="Logo" width="200">
   </a>
+  <br />
+  ![image](https://user-images.githubusercontent.com/8452197/132951874-f981e7ee-b70c-4bbd-82cf-52dca248ab22.png)
 </p>
 
 <p align="center">
