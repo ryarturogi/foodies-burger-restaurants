@@ -1,6 +1,6 @@
 <template>
   <footer class="l-footer">
-    <div class="c-footer">
+    <div class="c-footer container">
       <div class="c-footer__top">
         <div class="c-footer__logo">
           <img src="@/assets/img/SVG/logo-footer.svg" alt="Foodies Logo" />
@@ -50,7 +50,6 @@ export default {};
 
 .l-footer {
   width: 100%;
-  max-width: $screen-xl-min;
   margin: 0 auto;
   padding: 0 1rem;
   min-height: 16.4rem;
