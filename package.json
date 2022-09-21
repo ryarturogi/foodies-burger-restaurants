@@ -2,16 +2,6 @@
   "name": "foodies-elaniin",
   "version": "1.0.0",
   "private": true,
-  "engines": {
-    "node": "14.19.3",
-    "npm": "6.14.13",
-    "yarn": "1.22.17"
-  },
-  "nuxt": {
-    "host": "0.0.0.0",
-    "port": "3000",
-    "timing": false
-  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
