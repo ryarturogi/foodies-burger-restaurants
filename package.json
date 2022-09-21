@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": "14.17.0",
+    "node": "14.19.3",
     "npm": "6.14.13",
-    "yarn": "1.22.19"
+    "yarn": "1.22.17"
   },
   "nuxt": {
     "host": "0.0.0.0",
