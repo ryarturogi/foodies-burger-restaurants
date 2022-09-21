@@ -1,13 +1,13 @@
 <template>
   <div class="l-cta-mobile-app">
+    <div
+      class="c-cta-mobile-app__mobile-mockup"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
+      <img src="@/assets/img/PNG/mobile-mockup.png" alt="Mobile mockup" />
+    </div>
     <div class="c-cta-mobile-app__grid">
-      <div
-        class="c-cta-mobile-app__mobile-mockup"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        <img src="@/assets/img/PNG/mobile-mockup.png" alt="Mobile mockup" />
-      </div>
       <div class="c-cta-mobile-app__content">
         <h4
           class="c-cta-mobile-app__title"
@@ -108,16 +108,15 @@ export default {};
 
 .l-cta-mobile-app {
   width: 100%;
+  max-width: 1980px;
   min-height: 61rem;
   padding: 5rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @include m {
-    margin: 0 0 -15rem;
-  }
+  position: relative;
+  margin: 0 auto;
 }
 .c-cta-mobile-app__title {
   width: 100%;
@@ -199,22 +198,19 @@ export default {};
   }
 }
 .c-cta-mobile-app__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-  width: 100vw;
-
-  @include l {
-    grid-template-columns: minmax(28rem, 0.55fr) 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
 }
 .c-cta-mobile-app__mobile-mockup {
-  position: relative;
-  margin-top: -15rem;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 130%;
 
   @include l {
-    margin-top: 0;
     top: -15rem;
     width: 50vw;
   }

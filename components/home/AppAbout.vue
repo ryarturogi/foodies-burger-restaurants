@@ -1,5 +1,5 @@
 <template>
-  <div class="l-about-cta">
+  <div class="container l-about-cta">
     <div class="c-about-cta__image">
       <h2 class="c-about-cta__title" data-aos="flip-up" data-aos-delay="300">
         <div>La comida es</div>

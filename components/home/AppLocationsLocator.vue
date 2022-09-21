@@ -1,5 +1,5 @@
 <template>
-  <div class="l-locator row no-gutters p-0">
+  <div class="container l-locator row no-gutters p-0">
     <div class="c-locator col-md-12 col-lg-6 px-5">
       <h3 class="c-location__heading" data-aos="flip-up" data-aos-delay="300">
         Estamos para ti
